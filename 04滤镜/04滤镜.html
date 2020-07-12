@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 400px;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+				transition: all 3s;
+			}
+			img:hover{
+				-webkit-filter:none
+			}
+			.img1{
+				/* 滤镜属性
+				   grayscale:设置灰度，1是百分之百，0是百分之0
+				*/
+				-webkit-filter: grayscale(1);
+			}
+			.img2{
+				/* 滤镜属性
+				   brightness:亮度,默认值是1，正常亮度，2为200%亮度
+				*/
+				-webkit-filter: brightness(0);
+				
+			}
+			.img3{
+				/* 褐色属性
+				   sepia:1是100%褐色，正常为0
+				*/
+				-webkit-filter: sepia(1);	
+			}
+			.img4{
+				/* 模糊度
+				   blur:单位为像素
+				*/
+				-webkit-filter: blur(50px);	
+			}
+			.img5{
+				/* 对比度
+				   contrast:正常为1，如果调成0，就没有任何对比度，变成灰色
+				*/
+				-webkit-filter: contrast(2);	
+			}
+			.img6{
+				/* 饱和度
+				   saturate
+				*/
+				-webkit-filter: saturate(2);	
+			}
+			.img7{
+				/* 胶片底色效果
+				   invert
+				*/
+				-webkit-filter: invert(1);	
+			}
+			.img8{
+				/* 色相旋转
+				   hue-rotate()
+				*/
+				-webkit-filter: hue-rotate(100deg);	
+			}
+			.img9{
+				-webkit-filter: brightness(20) grayscale(1);
+				transition: all 15s;
+			}
+			.img9:hover{
+				-webkit-filter: brightness(1) grayscale(1);
+			}
+		</style>
+	</head>
+	<body>
+		<img class="img1" src="img/lld.jpg" >
+		<img class="img2" src="img/lld.jpg" >
+		<img class="img3" src="img/lld.jpg" >
+		<img class="img4" src="img/lld.jpg" >
+		<img class="img5" src="img/lld.jpg" >
+		<img class="img6" src="img/lld.jpg" >
+		<img class="img7" src="img/lld.jpg" >
+		<img class="img8" src="img/lld.jpg" >
+		<img class="img9" src="img/lld.jpg" >
+	</body>
+</html>
