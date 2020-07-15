@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #999;
+        }
+        #bgyellow:checked~#d1{
+            background: yellow;
+        }
+        #bggreen:checked~#d1{
+            background: green;
+        }
+        #bgred:checked~#d1{
+            background: red;
+        }
+        .btn{
+            display: inline-block;
+            width: 300px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid #999;
+            border-radius: 20px;
+            box-shadow: 0 0 0px #333333;
+            transition: all 0.5s;
+        }
+        .btn:hover{
+            box-shadow: 0 0 30px #333333;
+        }
+    </style>
+</head>
+<body>
+    <!-- lable可绑定输入框 
+    for绑定选项框的id
+    -->
+    <label class="btn" for="bgyellow">
+        选择为黄色
+    </label>
+    <label class="btn" for="bggreen">
+        选择为绿色
+    </label>
+    <label class="btn" for="bgred">
+        选择为红色
+    </label>
+    <h3>请选择你喜欢的颜色</h3>
+    黄色
+    <!-- hidde="hidden"属性可用于隐藏输入框 -->
+    <input type="radio" name="color" id="bgyellow" value="黄色" hidden>
+    绿色
+    <input type="radio" name="color" id="bggreen" value="绿色" hidden>
+    红色
+    <input type="radio" name="color" id="bgred" value="红色" hidden>
+
+</body>
+</html>

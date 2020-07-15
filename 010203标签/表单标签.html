@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+		 form表单标签
+		       属性：
+			        1.action 将表单数据提交至什么地址
+					2.提交的方法 get post
+					    get方法直接将表单数据放置到链接地址上，可以直接看得到，不够安全，但效率高
+						post方法表单数据放置到请求的body里面，不直接显示，安全，但是效率稍微低一点，表单数据可以提交比较大
+	     input标签
+		       属性：
+			        type:定义输入标签的类型 text/pasworda/submit
+					name:提交数据的名称
+					value:提交数placeholder:预置文字
+					placeholder:预置文字-->
+		<form action="https://www.baidu.com/s" method="get">
+			<input type="text" name="wd" placeholder="请输入用户名" value="" />
+			<input type="submit" value="百度搜索"/>
+			<input type="text" name="username" placeholder="请输入用户名" value="" />
+			<input type="password" name="password" placeholder="请输入用户名" id="" value="" />
+			<input type="submit" value="登录"/>
+		</form>
+	</body>
+</html>

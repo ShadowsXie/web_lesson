@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #999;
+        }
+        #bgyellow:checked~#d1{
+            background: yellow;
+        }
+        #bggreen:checked~#d1{
+            background: green;
+        }
+        #bgred:checked~#d1{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>请选择你喜欢的颜色</h3>
+    黄色
+    <input type="radio" name="color" id="bgyellow" value="黄色">
+    绿色
+    <input type="radio" name="color" id="bggreen" value="绿色">
+    红色
+    <input type="radio" name="color" id="bgred" value="红色">
+
+
+    <div id="d1"></div>
+</body>
+</html>

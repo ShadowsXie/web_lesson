@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #d1{
+            width: 0px;
+            height: 0px;
+            /* background: salmon; */
+            /* border: 20px solid aqua; */
+            border-top: 200px solid skyblue;
+            border-bottom: 200px solid transparent;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+        }
+
+        .chat{
+            width: 600px;
+            line-height: 100px;
+            padding: 30px;
+            font-size: 30px;
+            background: lawngreen;
+            margin: 0 auto;
+            border-radius: 30px;
+            position: relative;
+        }
+
+        .chat:before{
+            /* content: "before的内容";    */
+            content: "";/*content必须要写！*/
+            display: inline-block;
+            width: 0px;
+            height: 0px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 40px solid transparent;
+            border-right: 40px solid lawngreen;
+            position: absolute;
+            left: -80px;
+            top: 45px;
+        }
+        .chat:after{
+            /* content: "after的内容"; */
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <!-- 通过css可以创建假的元素 -->
+    <div id="d1"></div>
+
+    <div class="chat">
+        中午吃啥？
+    </div>
+</body>
+</html>

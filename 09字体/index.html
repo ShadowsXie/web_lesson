@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+            font-size: 50px;
+            /* 设置字体：设置的字体必须在系统里面是存在的，如果没有这个字体，就会默认按照系统字体样式显示*/
+            font-family: 宋体;
+            /* 设置字体的粗细，100-900，默认正常的字体粗细，但是比如说如果你设置了900，最粗的字体，
+            但是如果你的电脑没有这样粗的字体，依然会按照默认的样式显示。*/
+            font-weight: normal;
+            /* 字体颜色 */
+            color: aqua;
+            /* 设置字体排布，默认向左排布,left,center,right*/
+            text-align: center;
+            /* 文字的行高 */
+            line-height: 200px;
+            /* 文字阴影
+            text-shadow:水平偏移距离 垂直的偏移距离 模糊度 阴影的颜色
+            */
+            text-shadow:10px 5px 5px black ;
+
+        }
+        .d2{
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+            font-size: 50px;
+            /* 设置字体：设置的字体必须在系统里面是存在的，如果没有这个字体，就会默认按照系统字体样式显示*/
+            font-family: 宋体;
+            /* 设置字体的粗细，100-900，默认正常的字体粗细，但是比如说如果你设置了900，最粗的字体，
+            但是如果你的电脑没有这样粗的字体，依然会按照默认的样式显示。*/
+            font-weight: normal;
+            /* 字体颜色 */
+            color: #ffffff;
+            /* 设置字体排布，默认向左排布,left,center,right*/
+            text-align: center;
+            /* 文字的行高 */
+            line-height: 200px;
+            /* 文字阴影
+            text-shadow:水平偏移距离 垂直的偏移距离 模糊度 阴影的颜色
+            */
+            text-shadow:0px 0px 5px black ;
+
+        }
+        /* 发光效果 */
+        .d3{
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+            font-size: 50px;
+            /* 设置字体：设置的字体必须在系统里面是存在的，如果没有这个字体，就会默认按照系统字体样式显示*/
+            font-family: 宋体;
+            /* 设置字体的粗细，100-900，默认正常的字体粗细，但是比如说如果你设置了900，最粗的字体，
+            但是如果你的电脑没有这样粗的字体，依然会按照默认的样式显示。*/
+            font-weight: normal;
+            /* 字体颜色 */
+            color: #ffffff;
+            /* 设置字体排布，默认向左排布,left,center,right*/
+            text-align: center;
+            /* 文字的行高 */
+            line-height: 200px;
+            /* 文字阴影
+            text-shadow:水平偏移距离 垂直的偏移距离 模糊度 阴影的颜色
+            */
+            text-shadow:0px 0px 20px yellow,0px 0px 10px orange,0px 0px 10px orangered,0px 0px 5px red;
+        }
+    
+
+        /* 3D效果 */
+        .d4{
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+            font-size: 100px;
+            /* 设置字体：设置的字体必须在系统里面是存在的，如果没有这个字体，就会默认按照系统字体样式显示*/
+            font-family: 宋体;
+            /* 设置字体的粗细，100-900，默认正常的字体粗细，但是比如说如果你设置了900，最粗的字体，
+            但是如果你的电脑没有这样粗的字体，依然会按照默认的样式显示。*/
+            font-weight: normal;
+            /* 字体颜色 */
+            color: #ffffff;
+            /* 设置字体排布，默认向左排布,left,center,right*/
+            text-align: center;
+            /* 文字的行高 */
+            line-height: 200px;
+            /* 文字阴影
+            text-shadow:水平偏移距离 垂直的偏移距离 模糊度 阴影的颜色
+            */
+            text-shadow:1px 1px 0px yellow,2px 2px 0px orange,3px 3px 0px orangered,4px 4px 0px red,5px 5px 0px red,6px 6px 0px red;
+
+        }
+
+        /* 动画效果 */
+        .d5{
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+            font-size: 50px;
+            /* 设置字体：设置的字体必须在系统里面是存在的，如果没有这个字体，就会默认按照系统字体样式显示*/
+            font-family: 宋体;
+            /* 设置字体的粗细，100-900，默认正常的字体粗细，但是比如说如果你设置了900，最粗的字体，
+            但是如果你的电脑没有这样粗的字体，依然会按照默认的样式显示。*/
+            font-weight: normal;
+            /* 字体颜色 */
+            color: #ffffff;
+            /* 设置字体排布，默认向左排布,left,center,right*/
+            text-align: center;
+            /* 文字的行高 */
+            line-height: 200px;
+            /* 文字阴影
+            text-shadow:水平偏移距离 垂直的偏移距离 模糊度 阴影的颜色
+            */
+            text-shadow:0px 0px 20px yellow,0px 0px 10px orange,0px 0px 10px orangered,0px 0px 5px red;
+             
+             /* 动画 */
+             animation: donghua 3s infinite alternate;
+        }
+        @keyframes donghua{
+            from{
+                text-shadow:0px 0px 20px yellow,0px 0px 20px orange,0px 0px 20px orangered,0px 0px 20px red;
+            }
+            to{
+                text-shadow:0px 0px 10px yellow,0px 0px 10px orange,0px 0px 10px orangered,0px 0px 10px red;
+            }
+            }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        helloworld
+    </div>
+    <div class="d2">
+        helloworld
+    </div>
+    <div class="d3">
+        发光效果
+    </div>
+    <div class="d4">
+        3D效果
+    </div>
+    <div class="d5">
+        动画效果
+    </div>
+</body>
+</html>
