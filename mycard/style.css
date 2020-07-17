@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-size: 30px;
+}
+section {
+  margin-bottom: 0.667rem;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card {
+  padding: 1rem;
+  background: #f5fafe;
+}
+.card-wrapper {
+  width: 100%;
+}
+.card-wrapper .user-info {
+  width: 100%;
+  font-size: 0;
+}
+.card-wrapper .user-info__pic {
+  width: 100%;
+}
+.card-wrapper .user-info__pic img {
+  width: 100%;
+}
+.card-wrapper .user-info__desc {
+  padding: 0.333rem 0.667rem;
+}
+.card-wrapper .user-info__desc .name {
+  font-size: 1rem;
+  color: #010101;
+}
+.card-wrapper .user-info__desc .name .sex {
+  width: 0.67rem;
+  height: 0.6rem;
+  display: inline-block;
+  background-image: url("./img/sexw.png");
+  background-size: contain;
+}
+.card-wrapper .user-info__cha {
+  padding: 0.333rem 0.667rem;
+}
+.card-wrapper .user-info__cha .cha {
+  display: flex;
+}
+.card-wrapper .user-info__cha .cha .cha1 {
+  width: 1.33rem;
+  height: 0.667rem;
+  background-color: #00f;
+  border-radius: 5px;
+}
+.card-wrapper .user-info__cha .cha .cha2 {
+  width: 2rem;
+  height: 0.667rem;
+  background-color: #008000;
+  margin-left: 0.267rem;
+  border-radius: 5px;
+}
+.card-wrapper .user-info__cha .cha .cha3 {
+  width: 1.77rem;
+  height: 0.667rem;
+  background-color: #ffa500;
+  margin-left: 0.267rem;
+  border-radius: 5px;
+}
+.card-wrapper .user-info__cha .cha p {
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+}
+.card-wrapper .user-info__adr {
+  padding: 0.333rem 0.667rem;
+  display: flex;
+}
+.card-wrapper .user-info__adr .adr {
+  font-size: 10px;
+  width: 0.67rem;
+  height: 0.6rem;
+  display: inline-block;
+  background-image: url("./img/2.png");
+  background-size: contain;
+}
+.card-wrapper .user-info__adr .job {
+  font-size: 10px;
+  width: 0.67rem;
+  height: 0.6rem;
+  display: inline-block;
+  background-image: url("./img/2.png");
+  background-size: contain;
+}
