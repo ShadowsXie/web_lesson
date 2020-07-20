@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          margin: 0;
+          padding: 0;  
+        }
+        html,body{
+            font-family: sans-serif;
+            background-color: #13091b;
+            height: 100%;
+        }
+        body{
+            background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=11232128,2567744034&fm=26&gp=0.jpg)no-repeat;
+            background-size: cover;
+        }
+        audio{
+            visibility: hidden;
+        }
+        #play-btn{
+            display: block;
+            height: 45px;
+            width: 150px;
+            border-radius: 4px;
+            background-color: aqua;
+            text-align: center;
+            line-height: 45px;
+            color: #13091b;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-decoration: none;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <canvas id="canvas"></canvas>
+        <audio id="audio" controls src="https://wp.zp68.com/sub/filestores/2020/07/19/7585ed85d570166e355f04a7d556ad8a.mp3"></audio>
+        <a href="javascript:;" id="play-btn">PLAY</a>
+    </div>
+
+    <script>
+        var btn = document.getElementById('play-btn')
+        var audio = document.getElementById('audio')
+
+        btn.onclick = function(){
+            audio.play();
+            btn.style.display = 'none'
+            // 出现音浪
+            onLoadAudio()
+        }
+
+        function onLoadAudio() {
+            var context = new(window.AudioContext || windows.webkitAudioContext)//拿到audio的参数
+            // console.log(context)
+            var analyser = context.createAnalyser() // 创建一个分析器,可以获取音频的时间和频率的数据，可视化这份数据
+            console.log(analyser)
+            analyser.fftSize = 512
+            //输入 流式播放
+            var source = context.createMediaElementSource(audio)
+            sourse.connect(analyser)
+            analyser.connect(context.destination)
+
+
+            var bufferLength = analyser.frequencyBinCount
+            console.log(bufferLength)
+
+            var dataArray = new Uint8Array
+            console.log(dataArray)
+
+
+
+            var canvas = document.getElementById('canvas')
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight
+
+            var ctx = canvas.getContext("2d")
+            var WIDTH = canvas.width
+            var HEIGHT = canvas.height
+
+            var barWidth = WIDTH / bufferLength * 1.5
+            var barHeight;
+            // console.log(barWidth)
+
+            function renderFrame(){
+                requestAnimationFrame(renderFrame)
+
+                analyser.getByteFrequencyData(dataArray)
+                ctx.clearRect(0,0,WIDTH,HEIGHT)
+
+                for (var i = 0,x = 0;i < bufferLength; i++) {
+                    barHeight = dataArray[i]
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
