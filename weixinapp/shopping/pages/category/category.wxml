@@ -1,0 +1,33 @@
+<!--pages/category/category.wxml-->
+<view class="main">
+
+    <view class="category-left" scrool-y="true">
+        <block wx:for="{{category}}" wx:key="{{index}}">
+            <view class="shop-category" id="{{item.id}}" bindtap="menuChange">
+                <text >{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+
+    <scroll-view class="category-right" scroll-y="true" scroll-into-view="{{getId}}" scroll-with-animation="true">
+        <block wx:for="{{detail}}" wx:key="{{index}}" wx:for-item="item1">
+            <view class="category-right__page" id="{{item1.id}}">
+            <view class="category-right__banner"><image src="{{item1.banner}}"/></view>
+            <view class="category-right__title"><text >{{item1.cate}}</text></view>
+            <view class="category-right__shop">
+                <block wx:for="{{item1.detail}}" wx:key="{{index}}" wx:for-item="item2">
+                <view class="newest-list">
+                <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                    <image src="{{item2.thumb}}" />
+                    <view class="newest-name">
+                    <text>{{item2.name}}</text>
+                    </view>
+                </navigator>
+                </view>
+                </block>
+            </view>
+            </view>
+        </block>
+    </scroll-view>
+      
+</view>
