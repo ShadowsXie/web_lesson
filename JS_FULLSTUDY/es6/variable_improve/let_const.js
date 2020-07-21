@@ -40,10 +40,30 @@
 //     let tmp 
 // }
 
-var a = 'a'
-var a = 'aa'
-console.log(a)
+// var a = 'a'
+// var a = 'aa'
+// console.log(a)
 
-let b = 'b'
-let b = 'bb'
-console.log(b)
+// let b = 'b'
+// let b = 'bb'
+// console.log(b)
+
+
+
+
+// -------------------
+// const num = 1234
+
+// num = 1000
+
+// console.log(num)
+
+
+// if(true) {
+//     console.log(age)
+//     const age = 28
+// }
+
+const message = 'hello world'
+const message = 'hello'
+console.log(message)
