@@ -30,15 +30,16 @@
 
                <view class="item_middle">
                    <view class="moviesTitles">{{item.name}}</view>
-                   <view class="moviesAudios">想看人数</view>
-                   <view class="moviesActors">{{item.actor}}</view>
-                   <view class="moviesTitles">
-                       111
+                   <view class="moviesAudios">
+                       <text class="peopleSum">{{item.wantSee}}</text>
+                       <text >人想看</text>
                    </view>
+                   <view class="moviesActors">{{item.actor}}</view>
+                   <view class="moviesTime">时间:{{item.time}}</view>
                </view>
 
                <view class="item_right">
-                   按钮
+                  <text>预售</text>
                </view>
            </view> 
         </view>

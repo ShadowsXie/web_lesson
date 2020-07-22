@@ -1,0 +1,39 @@
+<map id="map" longitude="115.835373" latitude="28.719336"  
+  markers="{{markers}}" show-location style="width: 100%; height: 98vh;">
+    <cover-view class="top">
+      <cover-view class="left_pic"></cover-view>
+      <cover-view class="top_text">
+        <cover-view class="top_text_left">骑出运营区域</cover-view>
+        <cover-view class="top_text_right">助力自动关闭</cover-view>
+        <cover-view class="top_text_rp"></cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view class="bottom">
+      <cover-view class="bottom-bt">
+        <cover-image class="bottom-img" src="/resources/saoma.png"/>
+        <cover-view class="bottom-text">扫码用车</cover-view> 
+      </cover-view>  
+    </cover-view>
+    <cover-view class="bottom-top">
+      <cover-view class="bottom-top_content">
+        <cover-image class="bottom-top-img" src="/resources/bell.png"/>
+        <cover-view class="btc-text">规范骑行，安全常在!</cover-view>
+        <cover-view class="btc-right"></cover-view>
+      </cover-view>  
+    </cover-view>
+      <cover-view class="banshou-img">
+        <cover-image src="/resources/banshou.png" class="banshou-pic"/>
+      </cover-view>
+      <cover-view class="ami-img">
+        <cover-image src="/resources/ami.png" class="ami-pic"/>
+      </cover-view>
+      <cover-view class="left-pic-top">
+        <cover-view class="ltp">
+          <cover-image src="/resources/lighting.png" class="lighting-pic"/>
+        </cover-view>
+        <cover-view class="lbp">
+          <cover-image src="/resources/stop.png" class="lighting-pic"/>
+        </cover-view>
+      </cover-view>
+  </map>
+<view class="bottom-line"></view>
