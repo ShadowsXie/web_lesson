@@ -154,13 +154,14 @@ Page({
       }
     ],
 
-    getId: 'shucai'
+    getId: 'guowei'
   },
 
   menuChange (e) {
     console.log(e)
     this.setData({
-      getId: e.currentTarget.id
+      getId: e.currentTarget.id,
+      changeColor: e.currentTarget.id
     })
 
   },
