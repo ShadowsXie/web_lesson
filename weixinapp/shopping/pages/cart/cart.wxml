@@ -3,7 +3,9 @@
     <view>
         <view class="catr-box">
             <view class="cart-list" wx:for="{{carts}}" wx:key="index">
-                <icon class="cart-pro-select" type="success" size="23" color="red"> </icon>
+                <icon wx:if="{{item.selected}}" class="cart-pro-select" type="success" size="23" color="red" bindtap="selectList" data-index="{{index}}"> </icon>
+                <icon wx:else class="cart-pro-select" type="success" size="23" color="#d9d9d9" bindtap="selectList" data-index="{{index}}"> </icon>
+
 
                 <navigator class="cart-pro-goods" url="">
                     <image class="cart-thumb" src="{{item.image}}" />
@@ -22,9 +24,10 @@
         </view>
 
         <view class="cart-footer">
-            <icon class="total-select" type="success" size="23" color="red"> </icon>
+            <icon wx:if="{{selectAllStatus}}" class="total-select" type="success" size="23" color="red" bindtap="selectAll"> </icon>
+            <icon wx:else class="total-select" type="success" size="23" color="white" bindtap="selectAll"> </icon>
             <text >全选</text>
-            <text class="cart-total-ptice">￥{{totalPricce}}</text>
+            <text class="cart-total-ptice">￥{{totalPrice}}</text>
 
         </view>
     </view>
