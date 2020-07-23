@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网易云音乐</title>
+  <link rel="stylesheet" href="common.css">
+  
+</head>
+<body>
+  <div id="root">
+    <div id="banner">
+
+    </div>
+  </div>
+  <!-- <script>
+  //  ajax
+  // wx.request 从本地小程序 -> 服务器 
+  // localhost:1234 
+  // fetch  web 做接口请法语的地方 
+  const bannerEle = document.querySelector('#banner');
+
+  fetch('http://neteasecloudmusicapi.zhaoboy.com/banner')
+    .then(data => data.json())
+    .then(data => {
+      // console.log(data);
+      if (data.code == 200) { //状态码
+        const banners = data.banners;
+        // console.log(banners, '+++++++');
+        // array  -> html DOM 结点 
+        for(let banner of banners) {
+          console.log(banner);
+          bannerEle.innerHTML += `<img src="${banner.imageUrl}"/>`
+        }
+        // bannerEle.innerHTML = banners.map()
+      } else {
+        console.log('请求失败')
+      }
+      
+    })
+
+  </script> -->
+  <script src="common.js"></script>
+</body>
+</html>

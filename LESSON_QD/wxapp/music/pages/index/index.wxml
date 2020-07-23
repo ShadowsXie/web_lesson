@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="banners">
+    <image class="banners__pic" wx:for="{{banners}}" wx:for-item="pic" src="{{pic.imageUrl}}"></image>
+  </view>
+</view>
+<view class="recommend-list">
+  <view class="title">推荐歌单</view>
+  <view class="inner-list">
+    <view class="recommand-item" 
+    wx:for="{{recommendList}}"
+    wx:for-item="item"
+    wx:key="id">
+      {{item.copywriter}}
+      <image src="{{item.picUrl}}"/>
+    </view>
+  </view>
+</view>
