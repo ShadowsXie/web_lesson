@@ -68,6 +68,42 @@ Page({
     })
   },
 
+  countDown (e) {
+    let index = e.currentTarget.dataset.index
+    let carts = this.data.carts
+    let num = `carts[${index}].num`    // ES5写法： "carts[" + index + "].selected"
+    if(this.data.carts[index].num == 1){
+      carts.splice(index,1)
+      this.setData({
+        carts: carts
+      })
+    }else{
+      this.setData({
+        [num]: this.data.carts[index].num-1
+      })
+    }
+    this.getTotalPrice()
+  },
+
+  countAdd (e) {
+    let index = e.currentTarget.dataset.index
+    let carts = this.data.carts
+    let num = `carts[${index}].num`    // ES5写法： "carts[" + index + "].selected"
+    this.setData({
+      [num]: this.data.carts[index].num+1
+    })
+    this.getTotalPrice()
+  },
+
+  delete (e) {
+    let carts =this.data.carts
+    carts.splice(e.currentTarget.dataset.index,1)
+    this.setData({
+      carts: carts
+    })
+    this.getTotalPrice()
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
