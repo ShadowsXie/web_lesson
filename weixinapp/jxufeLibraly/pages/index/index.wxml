@@ -1,0 +1,7 @@
+<view class="main">
+  <view class="top"></view>
+  <swiper class="" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false">
+    
+  </swiper>
+    
+</view>

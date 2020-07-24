@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/clock1.png",
+      "selectedIconPath": "images/clock2.png",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "iconPath": "images/lou.png",
+      "selectedIconPath": "images/lou2.png",
+      "text": "我已到馆"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "iconPath": "images/flag.png",
+      "selectedIconPath": "images/flag2.png",
+      "text": "我要举报"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "iconPath": "images/yuyue.png",
+      "selectedIconPath": "images/yuyue2.png",
+      "text": "我的预约"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "iconPath": "images/ren.png",
+      "selectedIconPath": "images/ren1.png",
+      "text": "我的信息"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

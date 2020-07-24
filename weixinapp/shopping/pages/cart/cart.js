@@ -109,6 +109,14 @@ Page({
    */
   onLoad: function (options) {
     console.log('onLoad')
+    setTimeout(() => {                 
+      this.setData({
+        carts: [{ id: 1, title: '新鲜芹菜 半斤', image: '/image/s5.png', num: 4, price: 0.01, selected: true },
+        { id: 2, title: '素米 500g', image: '/image/s6.png', num: 1, price: 0.03, selected: true }
+      ]
+      })
+      this.getTotalPrice()
+    }, 1000)
   },
 
   /**
@@ -123,14 +131,7 @@ Page({
    */
   onShow: function () {
     console.log('onShow')
-    setTimeout(() => {                 
-      this.setData({
-        carts: [{ id: 1, title: '新鲜芹菜 半斤', image: '/image/s5.png', num: 4, price: 0.01, selected: true },
-        { id: 2, title: '素米 500g', image: '/image/s6.png', num: 1, price: 0.03, selected: true }
-      ]
-      })
-      this.getTotalPrice()
-    }, 1000)
+    
   },
 
   /**
