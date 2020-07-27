@@ -1,7 +1,7 @@
 // const s = new Set()   //类数组 set {}
 // // const arr = new Array()
 // console.log(s)
-let arr=[2, 3, 4, 1, 3, 2, 5]
+// let arr=[2, 3, 4, 1, 3, 2, 5]
 // for(let i = 0; i < arr.length;i++){
 //     console.log(arr[i])
 // }
@@ -48,7 +48,7 @@ let arr=[2, 3, 4, 1, 3, 2, 5]
 // console.log(arr.slice(3,5))   //取出从下标为 3 的元素到下标为 5 的元素的前一个 左闭右开 
 
 // let arr = [2, 3, 4, 1, 3, 2, 5]
-// console.log(arr.indexOf(4))   //判断某元素是否存在与该数组，且返回该元素的下标
+// console.log(arr.indexOf(8))   //判断某元素是否存在于该数组，且返回该元素的下标，若不存在则返回-1
 // console.log(arr.includes(4))  //判断某元素是否在该数组，返回true或false
 
 // const set = new Set()
@@ -57,7 +57,7 @@ let arr=[2, 3, 4, 1, 3, 2, 5]
 // set.clear()
 // console.log(set)
 
-// Array.from(['a', 'b', 'c']).forEach(e =>{
+// Array.from(['a', 'b', 'c']).forEach(e =>{       //Array.from 将[]强制认为是数组
 //     console.log(e)
 // })
 // const set = new Set([1, 2, 3, 4])
@@ -73,7 +73,7 @@ let arr=[2, 3, 4, 1, 3, 2, 5]
 // console.log(dedupe([1, 2, 2, 3, 3]))
 
 // set遍历
-// let set = new Set(['red', 'green', 'blue'])
+let set = new Set(['red', 'green', 'blue'])
 // let set = new Set()
 // set.add({name:'wn'})
 // set.add({age:'18'})
@@ -83,8 +83,12 @@ let arr=[2, 3, 4, 1, 3, 2, 5]
 // // values()是set结构中返回键值的遍历器
 // // entries()是set结构中返回键值对的遍历器
 // for(let item of set.keys()) {
-//     // console.log(item)
+//     console.log(item)
 // }
+let a = set.keys
+let b = set.values
+console.log(a)
+console.log(b)
 // for(let item of set.values()) {
 //     console.log(item)
 // }

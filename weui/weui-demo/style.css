@@ -1,0 +1,99 @@
+.container, .page{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.page__bd{
+  height: 100%;
+  background-color: #f5fafe;
+  overflow-y: auto;
+}
+.tab{
+  display: none;
+}
+.tab.show{
+  display: block;
+  overflow-y: scroll;
+  padding-bottom: 63px;
+  padding-top: 50px;
+}
+.fruit-items{
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.fruit-item{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.item-con{
+  background-color: #fff;
+  text-align: center;
+}
+.item-con img{
+  width: 100%;
+}
+.my-ifo{
+  text-align: center;
+  background-color: #fff;
+  height: 50px;
+  border-bottom: 10rpx solid rgb(158, 125, 125);
+  line-height: 50px;
+}
+
+.about-money,.about-pay{
+  margin-top: 10px;
+}
+
+.weui-cell{
+  background-color: #fff;
+}
+
+.about-pic{
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.about-pic img{
+  width: 100%;
+}
+
+.cart-header{
+  text-align: center;
+  background-color: #fff;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 10rpx solid #000;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.weui-media-box{
+  background-color: #fff;
+}
+
+.cart-goodsPic{
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+.cart-goodsPic img{
+  width: 100%;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
