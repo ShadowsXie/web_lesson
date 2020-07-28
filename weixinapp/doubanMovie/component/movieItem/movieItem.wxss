@@ -1,0 +1,38 @@
+.item{
+    display: inline-flex;
+}
+
+.item .info{
+    display: flex;
+    /* 垂直弹性布局 */
+    flex-direction: column; 
+}
+
+.name{
+    font-size: 32rpx;
+    font-weight: bold;
+    max-width: 200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.img{
+    width: 201rpx;
+    height: 290rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+}
+
+.star{
+    display: flex;
+}
+
+.score-wrapper{
+    display: flex;
+
+}
+
+.score{
+    line-height: 22px;
+}
