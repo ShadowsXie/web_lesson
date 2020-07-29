@@ -1,0 +1,10 @@
+<!-- <scroll-view>
+  <swiper>
+    <swiper-item class="" item-id="">  
+    </swiper-item wx:for >     
+  </swiper>
+  <view >
+    <view wx:for="{{}}">
+    </view>
+  </view>
+</scroll-view> -->
