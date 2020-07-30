@@ -1,0 +1,3 @@
+<view class="container">
+    <text class="message">{{rank}}.{{movie.title}}{{movie.rating.average}}</text>
+</view>

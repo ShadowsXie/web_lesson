@@ -1,1 +1,10 @@
 <nav-bar title="榜单"></nav-bar>
+<view class="container-top">
+
+</view>
+<view class="container-warrper" wx:for="{{moviesList}}" wx:key="index">
+    <image class="movie-sort__img" src="{{item.img}}" />
+    <view class="movies-message">
+        <movieList wx:for="{{item.movies}}" wx:key="index" wx:for-item="movie" movie="{{movie}}" rank="{{index+1}}"></movieList>
+    </view>
+</view>
