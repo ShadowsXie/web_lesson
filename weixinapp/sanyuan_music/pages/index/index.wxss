@@ -19,3 +19,79 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.banner{
+  width: 98%;
+  height: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+
+.recommend{
+  min-width: 100%;
+}
+
+.title{
+  font-weight: 700;
+  padding-left: 6px;
+  font-size: 14px;
+  line-height: 60px;
+}
+
+.recommend-music{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.recommend-wrapper{
+  position: relative;
+  width: 32%;
+}
+
+.img-wrapper{
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.decorate{
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  border-radius: 3px;
+  background: linear-gradient(rgba(110,110,110,0.4),rgba(255,255,255,0));
+}
+
+.recommend-wrapper__img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.recommend-wrapper__image{
+  width: 100%;
+  height: 100%;
+}
+
+.recommend-wrapper__name{
+  margin-top: 2px;
+  height: 50px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgb(46,48,48);
+  overflow: hidden;
+  padding: 0px 2px;
+}

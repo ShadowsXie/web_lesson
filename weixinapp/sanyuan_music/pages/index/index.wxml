@@ -1,10 +1,19 @@
-<!-- <scroll-view>
-  <swiper>
-    <swiper-item class="" item-id="">  
-    </swiper-item wx:for >     
+<scroll-view scroll-y="true">
+  <swiper indicator-dots="true" autoplay="true" circular="true" interval="3000" class="banner">
+      <swiper-item class="swipper-banner" item-id="" wx:for="{{bannerList}}" wx:key="index">  
+          <image src="{{item.imageUrl}}" />
+      </swiper-item>   
   </swiper>
-  <view >
-    <view wx:for="{{}}">
+  <view class="recommend">
+    <h1 class="title">推荐歌单</h1>
+    <view class="recommend-music">
+      <view class="recommend-wrapper" wx:for="{{recommendList}}" wx:key="index">
+        <view class="img-wrapper">
+          <view class="decorate"></view>
+          <image class="recommend-wrapper__img" src="{{item.picUrl}}"/>
+        </view>
+        <view class="recommend-wrapper__name">{{item.name}}</view>
     </view>
   </view>
-</scroll-view> -->
+  </view>
+</scroll-view>

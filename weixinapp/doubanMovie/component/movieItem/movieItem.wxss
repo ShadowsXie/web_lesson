@@ -34,5 +34,6 @@
 }
 
 .score{
-    line-height: 22px;
+    line-height: 28rpx;
+    margin-left: 20rpx;
 }

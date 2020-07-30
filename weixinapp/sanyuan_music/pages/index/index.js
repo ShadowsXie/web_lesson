@@ -18,16 +18,18 @@ Page({
     wx.request({
       url:'http://47.98.159.95/m-api/banner',
       success: (res) => {
+        console.log(res)
         this.setData({
-          recommendList: res.data.banners,
+          bannerList: res.data.banners,
         })
       }
     })
     wx.request({
       url:'http://47.98.159.95/m-api/personalized',
       success: (res) => {
+        console.log(res)
         this.setData({
-          bannerList: res.data.banners,
+          recommendList: res.data.result,
           isRecommedListLoading: true
         })
       }
