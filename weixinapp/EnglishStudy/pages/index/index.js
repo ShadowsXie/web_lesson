@@ -41,6 +41,7 @@ let handler = {
       .then(res => {
         if (res && res.status === 0 && res.data && res.data.length) {
           // 正常数据 do something
+          console.log(res)
           let articleData = res.data;
           //格式化原始数据
           let formatData = this.formatArticleData(articleData);
