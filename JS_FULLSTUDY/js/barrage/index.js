@@ -17,7 +17,8 @@ let $range = document.getElementById('range')
 
 // 创建 CanvasBarrage 类
 class CanvasBarrage {
-    constructor (canvas, video, opts = {}) { //constructor 是一种用于创建和初始化class对象的特殊方法
+    constructor (canvas, video, opts = {
+    }) { //constructor 是一种用于创建和初始化class对象的特殊方法
         //opts = {} 表示如果没有传值，就默认为{}，防止报错，这是ES6的语法
         
         if (!canvas || !video) return 
@@ -77,8 +78,10 @@ class CanvasBarrage {
           // 判断当前这条弹幕是否被初始化过了
           // 如果isInit是false，那么需要对当前弹幕进行初始化的操作
           if (!barrage.isInit) {
+            console.log(1)
             barrage.init()
             barrage.isInit = true
+
           }
           
           // 弹幕要从右往左渲染，所以x坐标减去当前的弹幕的speed即可
