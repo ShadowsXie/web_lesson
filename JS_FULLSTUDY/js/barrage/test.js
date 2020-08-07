@@ -15,7 +15,7 @@ function foo(opts) {
         fontSize: 20,
         data: []
     }
-    console.log(opts)
+    // console.log(opts)
     Object.assign(this, defOpts, opts)
     console.log(this)
     this.barrages = this.data.map(item => {
