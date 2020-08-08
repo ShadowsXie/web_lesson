@@ -1,0 +1,7 @@
+<!--component/sort-bar/sort-bar.wxml-->
+<scroll-view class="">
+    <scroll-item wx:for="{{sortName}}" wx:key="index">
+        <text >{{item}}</text>
+    </scroll-item>
+</scroll-view>
+  

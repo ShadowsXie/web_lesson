@@ -1,0 +1,23 @@
+<view class="container-warpper">
+    <!-- 头部搜索 -->
+    <view class="top-bar">
+        <view class="top-search">
+            <icon class="icon-sort" type="search" />
+            <input class="weui-input" auto-focus placeholder="搜索商品"/>
+        </view>
+        <view class="top-allSorts">
+            <view class="top-allSorts__txt">
+                <text class="all">ALL</text>
+                <text class="sort">分类</text>
+            </view>
+        </view>
+    </view>
+
+    <sort-bar value = "{{sortName}}"></sort-bar>
+
+    <swiper indicator-dots="true" indicator-active-color="#ffffff" indicator-color="#828282" circular="true">
+        <swiper-item class="ad-banner" wx:for="{{adImg}}" wx:key="index">
+            <image src="{{item}}" />
+        </swiper-item>
+    </swiper>
+</view>

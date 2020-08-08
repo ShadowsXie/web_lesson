@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/purchase/purchase",
+    "pages/identify/identify",
+    "pages/personal/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "DewuApp",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/purchase/purchase",
+        "iconPath": "images/purchase.png",
+        "selectedIconPath": "images/purchase-sel.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/identify/identify",
+        "iconPath": "images/identify.png",
+        "selectedIconPath": "images/identify-sel.png",
+        "text": "鉴别查询"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "images/personal.png",
+        "selectedIconPath": "images/personal-sel.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
