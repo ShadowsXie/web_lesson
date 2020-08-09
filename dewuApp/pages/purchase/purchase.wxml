@@ -12,12 +12,20 @@
             </view>
         </view>
     </view>
-
-    <sort-bar value = "{{sortName}}"></sort-bar>
-
-    <swiper indicator-dots="true" indicator-active-color="#ffffff" indicator-color="#828282" circular="true">
+    <!-- 分类 -->
+    <sort-bar class="sort-bar" value = "{{sortName}}"></sort-bar>
+    <!-- 广告栏 -->
+    <swiper class="advertise" indicator-dots="true" indicator-active-color="#ffffff" indicator-color="#828282" circular="true" autoplay="true" interval="3000">
         <swiper-item class="ad-banner" wx:for="{{adImg}}" wx:key="index">
             <image src="{{item}}" />
         </swiper-item>
     </swiper>
+    <!-- 服务栏 -->
+    <view class="server-bar">
+        <view class="server-info" wx:for="{{server}}" wx:key="index">
+            <view class="server-info__img"><image src="{{item.img}}" /></view>
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+
 </view>

@@ -6,7 +6,7 @@ Component({
   properties: {
     sortName: {
       type: Array,
-      value: ['推荐', '鞋类']
+      value: ['推荐', '鞋类', '服装', '手表', '箱包', '潮牌', '服装', '服装', '服装', '服装',]
     },
   },
 

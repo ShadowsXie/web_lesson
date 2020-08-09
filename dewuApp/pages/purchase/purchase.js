@@ -11,6 +11,12 @@ Page({
       'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2805088521,225827732&fm=26&gp=0.jpg',
       'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3007280859,3977562486&fm=26&gp=0.jpg',
       'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=497944728,1628752112&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3400654616,1515926353&fm=26&gp=0.jpg',
+    ],
+    server: [
+      {img:'/images/zhengping.png',name:'正品保证'},
+      {img:'/images/searchp.png',name:'逐件查验'},
+      {img:'/images/ddefine.png',name:'多重鉴别'},
     ]
   },
 

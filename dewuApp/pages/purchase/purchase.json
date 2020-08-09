@@ -1,4 +1,5 @@
 {
-  "usingComponents": {},
-  "sort-bar": "/component/sort-bar/sort-bar"
+  "usingComponents": {
+    "sort-bar": "/component/sort-bar/sort-bar"
+  }
 }

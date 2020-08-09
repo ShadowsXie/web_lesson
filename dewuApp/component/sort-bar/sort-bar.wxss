@@ -1,1 +1,8 @@
-/* component/sort-bar/sort-bar.wxss */
+.sort-bar{
+    white-space: nowrap;
+}
+.sort-bar__item{
+    margin-left: 25rpx;
+    margin-right: 25rpx;
+    color: #aaaabb;
+}
