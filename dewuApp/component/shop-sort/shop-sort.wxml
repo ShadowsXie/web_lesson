@@ -1,0 +1,4 @@
+<view class="shop-sort">
+    <view class="shop-sort__img"><image src="{{img}}" /></view>
+    <view class="shop-sort__txt">{{name}}</view>
+</view>

@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "sort-bar": "/component/sort-bar/sort-bar"
+    "sort-bar": "/component/sort-bar/sort-bar",
+    "shop-sort": "/component/shop-sort/shop-sort",
+    "shop-detail": "/component/shop-detail/shop-detail"
   }
 }

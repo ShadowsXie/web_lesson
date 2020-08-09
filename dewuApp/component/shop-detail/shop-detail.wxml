@@ -1,0 +1,8 @@
+<view class="shop-detail">
+    <view class="shop-img"><image src="{{img}}" /></view>
+    <view class="shop-name">{{name}}</view>
+    <view class="shop-sale">
+        <view class="shop-price">￥{{price}}</view>
+        <view class="pay-num">{{payNum}}付款</view>
+    </view>   
+</view>

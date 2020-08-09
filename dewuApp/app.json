@@ -7,7 +7,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "DewuApp",
+    "navigationBarTitleText": "得物App",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

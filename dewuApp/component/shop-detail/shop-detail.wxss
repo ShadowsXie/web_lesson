@@ -1,0 +1,25 @@
+.shop-detail{
+    height: 355rpx;
+    width: 310rpx;
+    padding-top: 70rpx;
+    padding-bottom: 40rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    border: 1rpx solid #f5f5f9;
+}
+
+.shop-img{
+    height: 165rpx;
+    width: 100%;
+    margin-bottom: 70rpx;
+}
+
+.shop-img image{
+    width: 100%;
+    height: 100%;
+}
+
+.shop-sale{
+    margin-top: 25rpx;
+    display: flex;
+}
