@@ -10,3 +10,12 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+# 旅梦学籍管理系统
+
+  小程序
+  数据库 db.collection
+  头像
+  文件上传
+
+  内推功能
+  学长 看简历/ 社会
