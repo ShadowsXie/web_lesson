@@ -1,2 +1,6 @@
-<!--pages/identify/identify.wxml-->
-<text>pages/identify/identify.wxml</text>
+<view class="identify-bgimg">
+    <view class="identify-title">鉴别行业开创者</view>
+</view>
+<view class="search">
+    <button type="primary" class="serch-button">查询</button>
+</view>

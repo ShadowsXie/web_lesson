@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/personal/personal",
     "pages/purchase/purchase",
-    "pages/identify/identify",
-    "pages/personal/personal"
+    "pages/identify/identify"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f5f5f9",
     "navigationBarTitleText": "得物App",
     "navigationBarTextStyle": "black"
   },

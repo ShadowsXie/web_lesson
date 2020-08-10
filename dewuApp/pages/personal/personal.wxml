@@ -1,2 +1,51 @@
-<!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class="main">
+    <view class="top">
+
+    </view>
+    <view style="background-color: #f5f5f9; width: 100%; height: 15rpx"></view>
+    <view >
+        <mp-cell link="true" value="购买" footer="全部订单 2">
+            <image slot="title" src="/images/personal/buy.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+        <view class="purchase-dec">
+            <view class="purchase-dec__bar">
+                <view class="purchase-dec__image">
+                    <image src="/images/personal/tobePay.png" />
+                </view>
+                <text >待付款</text>
+            </view>
+            <view class="purchase-dec__bar">
+                <view class="purchase-dec__image">
+                    <image src="/images/personal/tobeFa.png" />
+                </view>
+                <text >待发货</text>
+            </view>
+            <view class="purchase-dec__bar">
+                <view class="purchase-dec__image">
+                    <image src="/images/personal/tobeShou.png" />
+                </view>
+                <text >待收货</text>
+            </view>
+        </view>
+        <mp-cell link value="账户" footer="">
+            <image slot="title" src="/images/personal/money.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+        <mp-cell link value="卡券" footer="1">
+            <image slot="icon" src="/images/personal/card.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+        <mp-cell value="地址管理" footer="">
+            <image slot="icon" src="/images/personal/position.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+        <mp-cell value="消息通知" footer="">
+            <image slot="icon" src="/images/personal/message.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+        <mp-cell value="客服中心" footer="">
+            <image slot="icon" src="/images/personal/call.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+    </view>
+    <view style="background-color: #f5f5f9; width: 100%; height: 15rpx"></view>
+    <view class="quit">
+        <text >退出登录</text>
+    </view>
+</view>
+

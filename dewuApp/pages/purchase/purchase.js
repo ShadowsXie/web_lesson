@@ -45,7 +45,7 @@ Page({
              },     
           ],
     shopDisplay:[{img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
-                 {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
+                 {img: '/images/shop/shop2.png', name: 'Nike Air Force 1 Mid 07 LV8 黑白', price: '669', payNum: '16151'},
                  {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
                  {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
                  {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},

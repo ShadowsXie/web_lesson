@@ -22,6 +22,10 @@
     text-align: left;
 }
 
+.icon-sort{
+    padding-top: 8rpx;
+}
+
 .top-allSorts__txt{
     display: flex;
     flex-direction: column;

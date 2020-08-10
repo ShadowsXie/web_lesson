@@ -9,9 +9,12 @@
 }
 
 .shop-img{
-    height: 165rpx;
+    height: 125rpx;
     width: 100%;
-    margin-bottom: 70rpx;
+    padding-left: 35rpx;
+    padding-right: 35rpx;
+    margin-bottom: 60rpx;
+    box-sizing: border-box;
 }
 
 .shop-img image{
@@ -19,7 +22,22 @@
     height: 100%;
 }
 
+.shop-name{
+    font-size: 15px;
+}
+
 .shop-sale{
-    margin-top: 25rpx;
+    margin-top: 30rpx;
     display: flex;
+}
+
+.shop-price{
+    flex: 1;
+    font-size: 15px;
+}
+
+.pay-num text{
+    color: #818184;
+    font-size: 15px;
+    text-align: right;
 }
