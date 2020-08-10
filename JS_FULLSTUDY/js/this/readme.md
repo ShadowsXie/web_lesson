@@ -7,3 +7,7 @@ this所处的词法作用域在哪里生效了，this作用域就指向哪里
 
 # 隐式丢失
 隐式绑定的函数会丢失绑定对象，它会应用默认绑定
+
+# 显示绑定
+call apply bind
+如果call 和 apply 的第一个参数写得是null，那么this指向window对象
