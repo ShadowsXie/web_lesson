@@ -1,0 +1,39 @@
+// 一元操作符: + 
+
+// console.log(1 + '1')         //任何数据类型加字符串都变成字符串
+// // 1 ==> '1'   // 隐式类型转换
+// // '1' + '1'
+
+// console.log(+'1')
+// // +   ToNumber   Number('1')
+// console.log(+[])      //  0
+// console.log(+['1'])   //  1
+
+// ToPrimitive(input, [preferredType])   // 隐式类型转换函数
+// input 表示要处理的值
+// preferredType, 非必填， 表示希望转换成的类型， Number 和 String 只有这两种可填类型 
+// 如果 preferredType 没传， 当input是日期类型时， preferredType 相当于String， 其他情况都相当于Number
+
+
+// ToPrimitive(obj, Number)
+//  1. 如果obj是基本类型，直接返回
+//  2. 否则先调用valueOf, 如果返回一个原始值，则js将其返回
+//  3. 否则，调用toString，如果返回一个原始值，则js将其返回
+//  4. 否则，js抛出一个类型错误异常
+
+// ToPrimitive(obj, String)
+//  1. 如果obj是基本类型，直接返回
+//  2. 否则先调用toString, 如果返回一个原始值，则js将其返回
+//  3. 否则，调用valueOf，如果返回一个原始值，则js将其返回
+//  4. 否则，js抛出一个类型错误异常
+console.log(+['1', '2', '3'])
+console.log(+{})       // NaN 
+
+
+
+// 二元操作符：+
+// val1 + val2  =>  ToPrimitive(val1) + ToPrimitive(val2)
+console.log(null + 1)     // 1
+console.log([] + [])      // ''
+console.log([] + {})      // "[Object Object]"
+console.log({} + {})      // "[Object Object][Object Object]"
