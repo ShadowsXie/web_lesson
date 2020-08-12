@@ -1,0 +1,10 @@
+<van-cell-group>
+  <van-field
+    value="{{ title }}"
+    placeholder="请输入项目名称"
+    border="{{ false }}"
+    bind:change="changeTitle"
+  />
+</van-cell-group>
+<van-button type="default" bindtap="upload">添加图片</van-button>
+<van-button type="primary" bindtap="createProject">提交</van-button>
