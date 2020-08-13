@@ -1,16 +1,70 @@
 // miniprogram/pages/index/index.js
+import Notify from '../../miniprogram_npm/@vant/weapp/notify/notify';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    newGroupModal:true,
+    newGroupModal: false,
     groupName:''
   },
 
   showNewGroupModal() {
+    this.setData({
+      newGroupModal:true
+    })
+  },
+// 点击取消关闭dailog
+  closeDialog() {
+    this.setData({
+      newGroupModal:false
+    })
+  },
 
+  createGroup() {
+    const self = this
+    if (this.data.groupName === '') {
+      // 出现notify
+      Notify({
+        message: '起个名字吧',
+        duration: 1500,
+        selector: '#notify-selector',
+        color: '#ad0000',
+        background: '#dc3545',
+      });
+      self.selectComponent("#new-group-modal").stopLoading()
+      return
+    }
+    // 调用云函数
+    wx.cloud.callFunction({
+      name: 'createGroup',
+      data: {
+        groupName: self.data.groupName
+      },
+      success(res) {
+        console.log(res)
+        self.setData({
+          groupName: '',
+          newGroupModal: false
+        })
+        Notify({
+          message: '新建成功',
+          duration: 1500,
+          selector: '#notify-selector',
+          color: '#fff',
+          background: '#28a745',
+        });
+        setTimeout(() => {
+          wx.switchTab({
+            url: '../../pages/group/group'
+          })
+        }, 2000)
+      },
+      fail (error) {
+        console.log(error)
+      }
+    })
   },
 
   onGroupNameChange(event) {

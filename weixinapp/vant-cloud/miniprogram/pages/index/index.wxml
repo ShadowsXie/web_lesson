@@ -13,12 +13,15 @@
 </view>
 <!-- 弹出层 -->
 <van-dialog 
+    zIndex
     use-slot
     id="new-group-modal"
     title="创建一个群组"
     show="{{newGroupModal}}"
-    showCancelButton="true"
+    showCancelButton
     asyncClose
+    bind:cancel="closeDialog"
+    bind:confirm="createGroup"
 >
     <view class="group-dialog-body">
         <van-field
@@ -29,3 +32,6 @@
         />
     </view>
 </van-dialog>
+
+<!-- 提示 -->
+<van-notify id="notify-selector" />

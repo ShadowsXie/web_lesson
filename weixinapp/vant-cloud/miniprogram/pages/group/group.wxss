@@ -1,1 +1,21 @@
-/* miniprogram/pages/group/group.wxss */
+.container{
+    height: 100vh;
+    background-color:#ececec;
+}
+
+.group{
+    margin:auto;
+    padding: 40rpx;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.group-title{
+    display: flex;
+}
+
+.group-title image{
+    width: 124rpx;
+    height: 124rpx;
+}

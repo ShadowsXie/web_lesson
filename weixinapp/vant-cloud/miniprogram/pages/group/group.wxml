@@ -1,2 +1,11 @@
-<!--miniprogram/pages/group/group.wxml-->
-<text>miniprogram/pages/group/group.wxml</text>
+<view class="container">
+  <view class="group">
+    <view class="group-title">
+      <image src="https://677a-gzhiyi-154dd4-1256703754.tcb.qcloud.la/group3.png?sign=1119403c4109bbb505d07aa6d42ffdff&t=1545558495" />
+      <text>我的群组</text>
+    </view>
+    <van-cell-group wx:for="{{group}}" wx:key="index">
+        <van-cell title="{{item.name}}" is-link value="{{item.img}}" />
+    </van-cell-group>
+  </view>    
+</view>

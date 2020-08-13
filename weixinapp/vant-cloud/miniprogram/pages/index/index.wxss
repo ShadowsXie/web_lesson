@@ -35,3 +35,8 @@
 .new-item:hover{
     box-shadow: none;
 }
+
+/* .notify-selector{
+    z-index: 99999999999999;
+    position: relative;
+}  */
