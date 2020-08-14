@@ -1,0 +1,12 @@
+<view class="trends page">
+  <!-- compnent 能力 设计props -->
+  <!-- search 组件复用 -->
+  <!-- 组件声明的地方 -->
+  <search
+   custom-class='elevation' 
+   placeholder="Search Users or Repositories" 
+   bind:search="onSearch"></search>
+   <!-- <trend
+    repo='{{item}}' 
+    wx:for="{{trends}}" wx:key="{{index}}"></trend> -->
+</view>
