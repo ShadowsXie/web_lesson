@@ -15,5 +15,5 @@ function test() {
     }
     return arr
 }
-
-test()
+var a = test()
+console.log(a[1]())
