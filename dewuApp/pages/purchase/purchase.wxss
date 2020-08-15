@@ -1,3 +1,11 @@
+.purchase-top{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: #fff;
+    width: 100%;
+}
+
 .top-bar{
     padding: 15rpx 40rpx;
     display: flex;
@@ -57,10 +65,7 @@
 .sort-bar{
     margin-top: 15rpx;
     margin-bottom: 15rpx;
-}
-
-.advertise{
-    margin-top: 30rpx;
+    width: 100%;
 }
 
 .server-bar{

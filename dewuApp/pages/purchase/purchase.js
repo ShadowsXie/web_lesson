@@ -51,14 +51,102 @@ Page({
                  {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
                  {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
                  {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
-              ]
+    ],
+    shoes:[{img: '/images/shop/shop2.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
+    {img: '/images/AJ1.png', name: 'Nike Air Force 1 Mid 07 LV8 黑白', price: '669', payNum: '16151'},
+    {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
+    {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
+    {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
+    {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
+    {img: '/images/AJ1.png', name: 'Air Jordan 1 Retro High OG “Black', price: '669', payNum: '16151'},
+  ],
+    isRecommend: true,
+    recommendId: 0
+  },
+
+  OnViewText:function(e){
+    this.setData({
+      recommendId:e.detail
+    })  
+    if(this.data.recommendId != 0){
+      this.setData({
+        isRecommend: false
+      })
+    } else {
+      this.setData({
+        isRecommend: true
+      })
+    }
+    switch(e.detail) {
+      case '1': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '2': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '3': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '4': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '5': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '6': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '7': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '8': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '9': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+      case '10': {
+        this.setData({
+          shopDisplay: this.data.shoes
+        })
+        break;
+      }
+    }
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -72,7 +160,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    // this.shopDisplay()
   },
 
   /**

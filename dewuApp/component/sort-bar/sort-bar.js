@@ -14,13 +14,19 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    idx: 0
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    sortName:function (e) {
+      this.triggerEvent('myEvent',e.currentTarget.id)
+      console.log(e.currentTarget.id)
+      this.setData({
+        idx: Number(e.currentTarget.id)
+      })
+    }
   }
 })

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/personal/personal",
     "pages/purchase/purchase",
+    "pages/personal/personal",
     "pages/identify/identify"
   ],
   "window": {

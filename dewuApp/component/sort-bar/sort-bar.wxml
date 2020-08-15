@@ -1,6 +1,6 @@
 <!--component/sort-bar/sort-bar.wxml-->
 <scroll-view class="sort-bar" scroll-x="{{true}}" scroll-with-animation="true">
-    <scroll-item class="sort-bar__item"wx:for="{{sortName}}" wx:key="index">
+    <scroll-item class="{{idx == index ? 'sort-bar-sel': 'sort-bar__item'}}" wx:for="{{sortName}}" wx:key="index" bindtap="sortName" id="{{index}}">
         <text >{{item}}</text>
     </scroll-item>
 </scroll-view>

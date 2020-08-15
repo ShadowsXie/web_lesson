@@ -1,8 +1,17 @@
 .sort-bar{
     white-space: nowrap;
+    margin-bottom: 30rpx;
+    width: 100%;
 }
 .sort-bar__item{
     margin-left: 25rpx;
     margin-right: 25rpx;
     color: #aaaabb;
+}
+
+.sort-bar-sel{
+    margin-left: 25rpx;
+    margin-right: 25rpx;
+    color: #000000;
+    font-weight: bold;
 }
