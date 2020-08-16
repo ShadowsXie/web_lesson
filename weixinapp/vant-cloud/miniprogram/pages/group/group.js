@@ -5,21 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    group:[]
+    // group:[]
+    groupList: []
   },
 
-  getGroup() {
-    let that = this
-    wx.cloud.callFunction({
-      name: 'getGroup',
-      success(res){
-        console.log(res.result.data)
-        that.setData({
-          group:res.result.data
-        })
-      }
-    })
-  },
+  // getGroup() {
+  //   const that = this
+  //   wx.cloud.callFunction({
+  //     name: 'getGroup',
+  //     success(res){
+  //       console.log(res.result.data)
+  //       that.setData({
+  //         group:res.result.data
+  //       })
+  //     }
+  //   })
+  // },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -38,7 +39,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getGroup()
+    // this.getGroup()
+    const self = this
+    wx.cloud.callFunction({
+      name: 'getGroup',
+      data: {},
+      success(res) {
+        console.log(res)
+        self.setData({
+          groupList: res.result
+        })
+      },
+      fail(err) {
+        console.log(err)
+      }
+    })
   },
 
   /**

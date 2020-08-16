@@ -1,0 +1,40 @@
+.example{
+    /* 让设置了宽高的容器设置padding时能生效 */
+    box-sizing: border-box;    
+    /* 让弹性容器中的元素位于容器尾端 */
+    justify-content: flex-end;
+    /* 让弹性容器中的元素方向显示 */
+    flex-flow: row-reverse;
+    /* 上下40rpx，左右自适应（居中） */
+    margin: 40rpx auto; 
+    /* 弹性布局往左右靠 */
+    justify-content: space-between;
+}
+
+
+/* 水平居中 */
+.example{
+    /* 1.行内元素 */
+    text-align: center;
+    /* 2.块级元素 */
+    margin: 0 auto;
+    /* 3 */
+    display: flex;
+    justify-content: center;
+    /* 4 */
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,0);
+    /* 5 */
+    position:absolute;
+    width:固定;
+    left:50%;
+    margin-left:-0.5宽度;
+    /* 6 */
+    position:absolute;
+    width:固定;
+    left:0;
+    right:0;
+    margin:0 auto;
+    /* 垂直居中 */
+}
