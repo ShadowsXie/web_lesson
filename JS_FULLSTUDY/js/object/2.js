@@ -8,7 +8,7 @@ function Student(name, age, sex) {
     this.age = age
     this.sex = sex
     this.grade = 2017
-    return 123         // 显式的 return 无作用，除非 return 对象
+    return 123         // 显式的 return 无作用，除非 return 对象(包括数组)
     // return this     最后隐式返回this
 }
 function Test() {
