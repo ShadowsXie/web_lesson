@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var obj = {}    // 原型？
+        // var obj1 = new Object()     // 两种创建方式效果一样，建议使用第一种
+
+
+        // Object.create(原型)
+        var obj = {
+            name: 'wn',
+            age: '18'
+        }
+        var obj1 = Object.create(obj)
+        // obj1._proto_ == obj
+
+
+
+        // 网易面试题
+        // 所有的对象最终都会继承自 Object.prototype ? 错
+        // 特例
+        var obj2 = Object.create(null)   // 没有原型
+        // obj2.name = 'wn'
+
+        // obj2._proto_ = { name: 'wn'}
+        console.log(obj2.name)          // 'undefiend'
+
+
+        var obj3 = Object.create(obj2)
+    </script>
+</body>
+</html>

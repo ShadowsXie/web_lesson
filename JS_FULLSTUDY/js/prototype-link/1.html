@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 构造函数实例化出来的对象能通过和_proto_找到构造函数的原型
+
+        // function Person() {
+
+        // }
+        // var person = new Person()
+
+        // console.log(person.prototype)   // 里面还有 _Proto_
+
+
+        Grand.prototype.lastName = 'Wu'
+        function Grand() {
+            this.name = 'jilong'
+            this.fortune = {
+                card: 'visa'
+            }
+        }
+        var grand = new Grand()
+
+
+        Father.prototype = grand
+        function Father() {
+
+        }
+        var father = new Father
+
+
+        Son.prototype = father
+        function Son() {
+            this.hobbit = 'reading'
+        }
+        var son = new Son
+
+
+        // console.log(son.name)
+        // console.log(son.lastName)
+        // console.log(son.hobbit)
+
+        // ? ? ?
+        console.log(son.toString())
+        // Object.prototype是所有对象的最终原型
+
+
+        // console.log(son.fortune)
+        son.fortune.card2 = 'master'
+        console.log(son)
+        console.log(father)
+    </script>
+</body>
+</html>
