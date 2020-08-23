@@ -64,7 +64,7 @@ Page({
     recommendId: 0
   },
 
-  OnViewText:function(e){
+  OnViewText:function(e) {
     this.setData({
       recommendId:e.detail
     })  
@@ -140,6 +140,13 @@ Page({
       }
     }
 
+  },
+
+  gotoAllSort:function() {
+    console.log(111)
+    wx.navigateTo({
+      url: '/pages/allSort/allSort'
+    })
   },
 
   /**

@@ -1,0 +1,8 @@
+<view class="main">
+    <view class="top-bar">
+        <view class="top-search">
+            <icon class="icon-sort" type="search" />
+            <input class="weui-input" auto-focus placeholder="搜索商品"/>
+        </view>
+    </view>
+</view>

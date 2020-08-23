@@ -1,0 +1,35 @@
+.purchase-top{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: #fff;
+    width: 100%;
+}
+
+.top-bar{
+    padding: 15rpx 40rpx;
+    display: flex;
+    margin-bottom: 15rpx;
+}
+
+.top-search{
+    display: flex;
+    background-color: #f5f5f9;
+    border: 1rpx, solid,#000000;
+    border-radius: 5rpx;
+    text-align: center;
+    width: 715rpx;
+    height: 63rpx;
+    line-height: 63rpx;
+}
+
+.weui-input{
+    line-height: 100px;
+    height: 100%;
+    text-align: center;
+}
+
+.icon-sort{
+    display: inline-block;
+    padding-top: 8rpx;
+}

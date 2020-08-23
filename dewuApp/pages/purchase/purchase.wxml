@@ -6,8 +6,8 @@
                 <icon class="icon-sort" type="search" />
                 <input class="weui-input" auto-focus placeholder="搜索商品"/>
             </view>
-            <view class="top-allSorts">
-                <view class="top-allSorts__txt">
+            <view class="top-allSorts" bindtap="gotoAllSort">
+                <view class="top-allSorts__txt" >
                     <text class="all">ALL</text>
                     <text class="sort">分类</text>
                 </view>
