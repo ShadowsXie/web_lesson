@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.common.dev.js"></script>
     <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        [v-cloak]{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -20,20 +28,45 @@
             <span v-html="newMessage"></span>
         </div> -->
 
-        <div class="count">
+        <!-- <div class="count">
             <p>{{count}}</p>
             <button v-on:click="add">+</button>
             <button @click="reduce">-</button>
-        </div>
+        </div> -->
+
+        <!-- <div class="model">
+            <p>{{message}}</p>
+            <p>
+                v-model:
+                <input type="text" v-model="message"/>
+            </p>
+        </div> -->
+
+        <!-- <div class="pic">
+            <img :src="imgSrc" alt="">
+        </div> -->
+
+        <!-- <div @click="changeColor" v-bind:class="{red: isRed}">蜗牛很自恋</div> -->
+    
+        <!-- <div v-pre>{{message}}</div> -->
+
+        <!-- <div v-cloak>{{message}}</div> -->
+
+        <!-- <div v-once>{{message}}</div>       // 一经渲染将不再改变 -->
+        <input type="text" v-model="message"/>
     </div>
 
     <script>
         var app = new Vue({
             el: '#app',
             data: {
+                className1: 'active',
+                className2: 'wrapper',
                 message: 'Hello World',
                 newMessage: '<h2>Hello Vue!</h2>',
+                imgSrc: 'https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3984473917,238095211&fm=26&gp=0.jpg',
                 isSure: false,
+                isRed: false,
                 list: ['a', 'b', 'c', 'd'],
                 people: [
                     { name: '祥祥', age: 18},
@@ -49,6 +82,9 @@
                 },
                 reduce() {
                     this.count--
+                },
+                changeColor() {
+                    this.isRed = !this.isRed
                 }
             },
 
