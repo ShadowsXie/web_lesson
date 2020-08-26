@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.common.dev.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+            background: #fff;
+            color: #000;
+            font-size: 62.5%;
+        }
+
+        body {
+            min-height: 100%;
+            display: grid;
+            place-items: center;
+            font-size: 1.4rem;
+        }
+
+        button {
+            border: none;
+            color: #fff;
+            background: #42b983;
+            font: inherit;
+            font-size: 1.8rem;
+            padding: 0.5em 1em;
+            border-radius: .3em;
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 998;
+            background: #2c3e50;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        .modal{
+            position: absolute;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: fit-content;
+            height: fit-content;
+            text-align: center;
+            max-width: 22em;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: #fff;
+            z-index: 999;
+            margin: auto;
+        }
+        .modal h1 {
+            margin: 0 0 1rem;
+        }
+        /* ---------- */
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 0.4s linear;
+        }
+        .pop-enter,
+        .pop-leave-to {
+            opacity: 0;
+            transform: scale(0.3) translateY(-50%);
+        }
+        .pop-enter-active,
+        .pop-leave-active {
+            transition: transform .4s cubic-bezier(0.5, 0, 0.5, 1), opacity .4s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button class="button" @click="isShowModal">Show Modal</button>
+        <transition name='fade' appear>
+            <div class="modal-overlay" v-if="showModal" @click="isShowModal"></div>
+        </transition>
+        
+
+        <transition name="pop" appear>
+            <div class="modal" v-if='showModal'>
+                <h1>Vue transition</h1>
+                <p>
+                    绝对拉风合肥ui发风法和嘉宾纷纷‘纷纷合法开发南康安康疯狂方可恢复开放
+                </p>
+                <button class="button" @click="isShowModal">Hide Modal</button>
+            </div>
+        </transition>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    showModal: true,
+                }
+            },
+            methods: {
+                isShowModal() {
+                    this.showModal = !this.showModal
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
