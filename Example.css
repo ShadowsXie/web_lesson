@@ -37,4 +37,8 @@
     right:0;
     margin:0 auto;
     /* 垂直居中 */
+
+    /* 设置网格布局，让元素居中水平垂直 */
+    display: grid;
+    place-items: center;
 }
