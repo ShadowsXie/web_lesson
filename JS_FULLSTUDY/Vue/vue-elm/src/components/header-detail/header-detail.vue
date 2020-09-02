@@ -6,6 +6,7 @@
           <h1 class="name">{{seller.name}}</h1>
           <div class="star-wrapper">
             <!-- 星星 -->
+            <v-star :seller="seller"></v-star>
           </div>
           <div class="title">
             <div class="line"></div>
@@ -37,7 +38,7 @@
 
 <script>
 import SupportIco from '@/components/support-ico/support-ico'
-
+import VStar from '@/components/v-star/v-star'
 export default {
   props: {
     seller: {
@@ -55,10 +56,11 @@ export default {
   methods: {
     hide() {
       this.$emit('hide', false)
-    }
+    },
   },
   components: {
-    SupportIco
+    SupportIco,
+    VStar
   }
 }
 </script>
