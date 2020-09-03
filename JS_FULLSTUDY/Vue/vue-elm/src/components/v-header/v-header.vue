@@ -58,7 +58,7 @@ export default {
   },
   created() {
     setTimeout(() => {
-      console.log(this.seller)
+      // console.log(this.seller)
       this.sellers = this.seller
     }, 1000)  
   },

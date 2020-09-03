@@ -63,7 +63,7 @@ export default {
     width 20px
     height 20px 
     background-size 20px 20px
-    bg-image('star24_on')
+    bg-image('star48_on')
     margin-right 22px
     &:last-child 
       margin-right 0
@@ -71,7 +71,7 @@ export default {
     width 20px
     height 20px 
     background-size 20px 20px
-    bg-image('star24_half')
+    bg-image('star48_half')
     margin-right 22px
     &:last-child 
       margin-right 0
@@ -79,7 +79,7 @@ export default {
     width 20px
     height 20px
     background-size 20px 20px
-    bg-image('star24_off')
+    bg-image('star48_off')
     margin-right 22px
     &:last-child 
       margin-right 0
