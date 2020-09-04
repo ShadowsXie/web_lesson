@@ -5,7 +5,7 @@
         <span class="inner icon-remove_circle_outline"></span>
       </div>
     </transition>
-    <div class="cart-count">{{food.count}}</div>
+    <div class="cart-count" v-show="food.count>0">{{food.count}}</div>
     <div class="cart-add icon-add_circle" @click.stop="add"></div>
   </div>
 </template>
@@ -19,14 +19,17 @@ export default {
   },
   methods: {
     decrease() {
-
+      if(this.food.count) {
+        this.food.count--
+      }   
     },
-    add() {
+    add(event) {
       if (!this.food.count) {
         this.$set(this.food, 'count', 1)
       } else {
         this.food.count++
       }
+      this.$emit('add', event.target)
     }
   }
 }
