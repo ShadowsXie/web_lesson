@@ -4,7 +4,7 @@
       <div class="content-left">
         <div class="logo-wrapper">
           <div class="logo" :class="{'highlight': totalCount > 0}">
-            <i class="icon-shopping_cart" :class="{'highlight': totalCount > 0}"></i>
+            <i class="icon-shopping_cart" :class="{'highlight': totalCount > 0}" @click="showDefault"></i>
           </div>
           <div class="num" v-show="totalCount>0">
             <span class="bubble">{{totalCount}}</span>
@@ -122,6 +122,37 @@ export default {
         ball.show = false
         el.style.display = 'none'
       }
+    },
+    showDefault() {
+      this.$createActionSheet({
+        title: '购物车',
+        data: [
+          {
+            content: '<em>align - center</em>',
+            class: 'cube-foo'
+          },
+          {
+            content: '<em>align - center</em>',
+            class: 'cube-foo'
+          },
+          {
+            content: '<em>align - center</em>',
+            class: 'cube-foo'
+          },
+          {
+            content: '<em>align - center</em>',
+            class: 'cube-foo'
+          },
+          {
+            content: '<em>align - center</em>',
+            class: 'cube-foo'
+          },
+          {
+            content: '<em>align - center</em>',
+            class: 'cube-foo'
+          }
+        ]
+      }).show()
     }
   },
   computed: {

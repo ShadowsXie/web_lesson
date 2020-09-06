@@ -1,16 +1,22 @@
 <template>
   <div class="star-container">
-    <span v-for="(item, index) in starNum" :class="item" :key="index"></span>
+    <span v-for="(item, index) in starNum" :class="item"  :key="index"></span>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    seller: {
-      type: Object,
+    score: {
+      type: Number,
       default() {
-        return {}
+        return 0
+      }
+    },
+    size: {
+      type: Number,
+      default() {
+        return 48
       }
     }
   },
@@ -33,15 +39,15 @@ export default {
       }
     },
     pushStar() {
-      this.starNums(this.seller.score)
+      this.starNums(this.score)
       for(let i = 0; i < this.fullStar; i++){
-        this.starNum.push('fullStar')
+        this.starNum.push(`fullStar icon-${this.size}`)
       }
       for(let i = 0; i < this.halfStar; i++){
-        this.starNum.push('halfStar')
+        this.starNum.push(`halfStar icon-${this.size}`)
       }
       for(let i = 0; i < this.noStar; i++){
-        this.starNum.push('noStar')
+        this.starNum.push(`noStar icon-${this.size}`)
       }
     }
   },
@@ -59,7 +65,7 @@ export default {
   align-items center
   display flex
   justify-content: center
-  .fullStar
+  .fullStar.icon-48
     width 20px
     height 20px 
     background-size 20px 20px
@@ -67,7 +73,7 @@ export default {
     margin-right 22px
     &:last-child 
       margin-right 0
-  .halfStar
+  .halfStar.icon-48
     width 20px
     height 20px 
     background-size 20px 20px
@@ -75,12 +81,36 @@ export default {
     margin-right 22px
     &:last-child 
       margin-right 0
-  .noStar
+  .noStar.icon-48
     width 20px
     height 20px
     background-size 20px 20px
     bg-image('star48_off')
     margin-right 22px
+    &:last-child 
+      margin-right 0
+  .fullStar.icon-36
+    width 15px
+    height 15px 
+    background-size 15px 15px
+    bg-image('star48_on')
+    margin-right 6px
+    &:last-child 
+      margin-right 0
+  .halfStar.icon-36
+    width 15px
+    height 15px 
+    background-size 15px 15px
+    bg-image('star48_half')
+    margin-right 6px
+    &:last-child 
+      margin-right 0
+  .noStar.icon-36
+    width 15px
+    height 15px
+    background-size 15px 15px
+    bg-image('star48_off')
+    margin-right 6px
     &:last-child 
       margin-right 0
 </style>
