@@ -4,7 +4,7 @@
     <hr/>
     <h3>{{abc}}</h3>
     <div class="btn">
-      <button @click="add">+</button>
+      <button @click="addActions">+</button>
       <button @click="reduce">-</button>
     </div>
   </div>
@@ -12,7 +12,7 @@
 
 <script>
 import store from '@/vuex/store.js'
-import { mapState, mapMutations, mapGetters } from 'vuex'
+import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
 export default {
   data() {
     return {
@@ -51,7 +51,8 @@ export default {
   // ])
 
   methods: {
-    ...mapMutations(['add', 'reduce'])
+    ...mapMutations(['add', 'reduce']),
+    ...mapActions(['addActions'])
   }
 }
 </script>

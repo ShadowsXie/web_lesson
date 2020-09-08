@@ -28,9 +28,27 @@ const actions = { // 提交mutations里面的方法
   }
 }
 
-export default new Vuex.Store({
+const moduleA = {
   state,
   mutations,
   getters,
   actions
+}
+
+const moduleB = {
+  state: {
+
+  },
+  mutations: {
+
+  },
+  getters,
+  actions
+}
+
+export default new Vuex.Store({
+  modules: {
+    a: moduleA,
+    b: moduleB
+  }
 }) 
