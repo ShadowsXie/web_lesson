@@ -5,20 +5,25 @@
       <span slot="content">我的音乐</span>
       <i class="iconfont" slot="right-icon">&#xe60d;</i>
     </v-header>
-    <!-- <router-view/> -->
+    <v-tab></v-tab>
 
     <!-- menu -->
     <v-sidebar></v-sidebar>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
 import Header from '@/components/header'
 import sidebar from '@/components/sidebar'
+import tab from '@/components/tab'
 export default {
   components: {
     'v-header': Header,
-    'v-sidebar': sidebar
+    'v-sidebar': sidebar,
+    'v-tab': tab
   }
 }
 </script>
@@ -26,12 +31,12 @@ export default {
 <style lang="stylus">
 @font-face {
   font-family: 'iconfont';  /* project id 2052914 */
-  src: url('//at.alicdn.com/t/font_2052914_h2y4p5ff31.eot');
-  src: url('//at.alicdn.com/t/font_2052914_h2y4p5ff31.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2052914_h2y4p5ff31.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2052914_h2y4p5ff31.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2052914_h2y4p5ff31.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2052914_h2y4p5ff31.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_2052914_yy86miqyuu.eot');
+  src: url('//at.alicdn.com/t/font_2052914_yy86miqyuu.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2052914_yy86miqyuu.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2052914_yy86miqyuu.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2052914_yy86miqyuu.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2052914_yy86miqyuu.svg#iconfont') format('svg');
 }
 .iconfont{
     font-family:"iconfont" !important;

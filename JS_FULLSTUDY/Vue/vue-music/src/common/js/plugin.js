@@ -2,7 +2,7 @@ let Toast = {}
 Toast.install = function(Vue, options) {
   let opt = {
     defaultType: 'center', // 默认显示位置
-    duration: '10000' // 持续的时间
+    duration: '1500' // 持续的时间
   }
 
   for (let property in options) {
@@ -12,6 +12,10 @@ Toast.install = function(Vue, options) {
   Vue.prototype.$toast = (tips, type) => {
     if (type) {
       opt.defaultType = type // 如果传了type, 那么就使用该type作为位置展示
+    }
+
+    if (document.getElementsByClassName('vue-toast').length) {
+      return
     }
 
     let toastTpl = Vue.extend({
