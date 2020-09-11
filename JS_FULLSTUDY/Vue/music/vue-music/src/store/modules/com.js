@@ -2,7 +2,7 @@ import * as type from '../types'
 
 const state = {
   showSidebar: false,
-  searchHistory: ['vae', '周杰伦', '林俊杰', '五月天']
+  searchHistory: []
 }
 
 const getters = {
@@ -19,6 +19,9 @@ const mutations = {
   },
   [type.COM_CLEAR_SEARCH_HISTORY](state) {
     state.searchHistory = []
+  },
+  [type.COM_SAVE_SEARCH_HISTORY](state, payload) {
+    state.searchHistory = payload
   }
 }
 
@@ -31,6 +34,11 @@ const actions = {
   },
   clearSearchHistory({ commit }) {
     commit(type.COM_CLEAR_SEARCH_HISTORY)
+  },
+  saveSearchHistory({ commit, state }, query) {
+    state.searchHistory.unshift(query)
+    new Set(state.searchHistory)
+    commit(type.COM_SAVE_SEARCH_HISTORY, state.searchHistory)
   }
 }
 

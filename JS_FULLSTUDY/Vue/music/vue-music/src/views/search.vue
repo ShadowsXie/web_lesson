@@ -31,7 +31,7 @@
     </div>
     <!-- 搜索结果列表 -->
     <div class="search-result" ref="searchResult" v-show="query">
-      <v-search-reasult></v-search-reasult>
+      <v-search-reasult :query="query" @select="saveSearch"></v-search-reasult>
     </div>
   </div>
 </template>
@@ -71,7 +71,12 @@ export default {
         this.hotKey = res.result.hots.slice(0, 10)
       })
     },
-    ...mapActions(['deleteSearchHistory', 'clearSearchHistory'])
+    ...mapActions(['deleteSearchHistory', 'clearSearchHistory', 'saveSearchHistory']),
+    saveSearch(song) {
+      // 保存历史记录
+      console.log(song)
+      this.saveSearchHistory(this.query)
+    }
   },
   watch: {
     query(newQuery) {
