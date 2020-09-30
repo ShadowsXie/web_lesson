@@ -1,0 +1,127 @@
+<!-- 代码题：
+点亮red，停1s，点亮 yellow，停2s，点亮 green 停 4s，然后循环5次。 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      background-color: grey;
+      display: inline-block;
+      margin: 30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      ;
+    }
+
+    .green.light {
+      background-color: green;
+    }
+
+    .yellow.light {
+      background-color: yellow;
+    }
+
+    .red.light {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="red"></div>
+  <div class="yellow"></div>
+  <div class="green"></div>
+  <button id="next" onclick="go();">开始</button>
+  <script>
+    function green() {
+      var lights = document.getElementsByTagName("div");
+      for (var i = 0; i < 3; i++)
+        lights[i].classList.remove("light")
+        document.getElementsByClassName("green")[0].classList.add('light')
+    }
+    function red() {
+      var lights = document.getElementsByTagName("div");
+      for (var i = 0; i < 3; i++)
+        lights[i].classList.remove("light")
+        document.getElementsByClassName("red")[0].classList.add('light')
+    }
+    function yellow() {
+      var lights = document.getElementsByTagName("div");
+      for (var i = 0; i < 3; i++)
+        lights[i].classList.remove("light")
+        document.getElementsByClassName("yellow")[0].classList.add('light')
+    }
+    // let i = 0
+    // once()
+    function once() {
+      // if(i >= 5) return
+      // i ++
+      return new Promise((resolve, reject) => {
+        red()
+        setTimeout(() => {
+          yellow()
+          setTimeout(() => {
+            green()
+            setTimeout(() => {
+              // once()
+              resolve()
+            },4000)
+          },2000)
+        },1000)
+        })
+    }
+    // setInterval
+    // for (let i = 0; i < 5; i++) {
+    //   once()
+    // }
+    async function go() {
+      for (let i = 0; i < 5; i ++) {
+        await once()   // await promise
+      }
+    }
+    // sleep(1000)
+    // console.log(1)
+    function sleep(time) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve()
+        }, time)
+      })
+    }
+    // axios().then()
+    // sleep(2000).then()
+
+
+
+    // GET POST
+    // http 并没有规定 GET 参数 一定放到 url 后面
+    // 用 POST 一定要放到 请求体里面
+
+    // 语义区别
+    // 安全性：GET -> POST -> https
+
+    // axios XMLhttprequest
+    let xhr = new XMLHttpRequest()
+    // GET
+    xhr.open('POST', 'http://neteasecloudmusicapi.zhaoboy.com/login/cellphone', true)
+    xhr.onload = function(res) {
+      console.log(res);
+    }
+    // 请求体
+    let obj = {
+      phone: 17607080585,
+      password: 'zbc'
+    }
+    xhr.setRequestHeader('content-type', 'text/plain')
+    // content-type
+    // 301(永久重定向 http -> https) 302(临时重定向 未登录) 401(未授权) 101(交换协议)
+    xhr.send(JSON.stringify(obj))
+  </script>
+</body>
+
+</html>
