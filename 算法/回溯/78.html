@@ -1,0 +1,20 @@
+<script>
+  // [3,4,5,6,7,8] k个数 sum 为目标值
+  var subsets = function(nums) {
+    let result = []
+    function backtrack(start, tmpPath) {
+      // [1, 2, 3]
+      // 本质： n 叉树的遍历
+      result.push(tmpPath.slice(0))
+      for(let i = start; i < nums.length; i ++) {
+        let num = nums[i]
+        tmpPath.push(num)
+        backtrack(i + 1, tmpPath)
+        tmpPath.pop(num)
+      }
+    }
+    backtrack(0, [])
+    return result
+  }
+  console.log(subsets([1, 2, 3]));
+</script>
