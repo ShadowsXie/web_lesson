@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h2>
+      <h1>
+      </h1>
+    </h2>
+  </div>
+  <hr />
+  <script>
+    // document.querySelector('#app')
+    // document.documentElement
+    function walk(root) {
+      // console.log(root);
+      if (root.getAttribute('id') === 'app') {
+        console.log('-----', root);
+      }
+      // if (root.tagName.startsWith('H')) {
+      //   if(res[root.tagName] != undefined) {
+      //     res[root.tagName] ++
+      //   } else {
+      //     res[root.tagName] = 1
+      //   }
+      // }
+      if (root.children) {
+        for (let child of root.children) {
+          // 所有子节点
+          walk(child)
+        }
+      }
+    }
+    walk(document.documentElement)
+  </script>
+</body>
+</html>
