@@ -1,0 +1,19 @@
+<script>
+  // 简单版
+  Function.prototype.myBind = function(THIS, ...arg1) {
+    let fn = this  // 哪个函数调用 bind
+    // fn.prototype
+    function T(...arg2) {
+      // ...
+      return fn.call(THIS, ...arg1, ...arg2)
+    }
+    return T
+  }
+
+  function sum(a, b, c) {
+    return a + b + c
+  }
+  sum.prototype.say = function() {
+    console.log(10);
+  }
+</script>
