@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '../static/clear-default.css'
+import '../src/plugins/vant'
+import api from './../axios/index'
+Vue.use(api)
 
 Vue.config.productionTip = false
 
