@@ -1,0 +1,30 @@
+<script>
+  function MyPromise(fn) {
+    let self = this;
+    this.value = undefined;
+    function onResolve(value) {
+      console.log(value);
+      self.value = value;
+    }  // 定义 什么时候执行
+    function onReject(reason) {}
+    fn(onResolve, onReject);
+  }
+  MyPromise.prototype.then = function(fn) {
+    fn(this.value);
+  }
+  new MyPromise((resolve, reject) => {
+    resolve(1000);  // 改变状态的时候 
+  })
+  .then(r => {
+    console.log(r)
+  })
+
+
+  function readFile(fn) {
+  // 
+    fn('hello world')
+  }
+  readFile((r) => {
+    console.log(r); // hello world
+  })
+</script>
