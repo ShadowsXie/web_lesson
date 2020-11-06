@@ -15,21 +15,26 @@ function createElement(type, props, children) {
 function setAttr(node, key, value) {
   switch (key) {
     case 'value': // node 是input或者textarea
-      if (node.tahName.toUpperCase() === 'INPUT' || node.tahName.toUpperCase() === 'TEXTAREA') {
+      if (node.tagName.toUpperCase() === 'INPUT' || node.tagName.toUpperCase() === 'TEXTAREA') {
         node.value = value
       } else {
         node.setAttribute(key, value)
       }
-    break
+    break;
     case 'style':
       node.style.cssText = value
       break;
     default: 
       node.setAttribute(key, value)
-      break
+      break;
   }
 }
 
+// {
+//   children: (2) [Element, Element]
+//   props: {value: "test"}
+//   type: "input"
+// }
 
 // render 方法将vnode转化为真实dom
 function render(eleObj) {
@@ -45,8 +50,6 @@ function render(eleObj) {
   });
   return el
 }
-
-
 
 // 将元素插入到页面内
 function renderDom(el, target) {
