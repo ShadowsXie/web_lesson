@@ -5,10 +5,10 @@
       <van-tabbar-item replace to="/home/shop" icon="home-o">
         商品
       </van-tabbar-item>
-      <van-tabbar-item replace to="/home/publish" icon="search">
+      <van-tabbar-item replace to="/home/publish" icon="upgrade">
         发布
       </van-tabbar-item>
-      <van-tabbar-item replace to="/home/mine" icon="search">
+      <van-tabbar-item replace to="/home/mine" icon="contact">
         我的
       </van-tabbar-item>
     </van-tabbar>

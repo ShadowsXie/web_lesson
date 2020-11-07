@@ -13,6 +13,11 @@ import {
   Tab,
   Tabs,
   Sku,
+  Cell,
+  NavBar,
+  Form,
+  Uploader,
+  Search,
 } from 'vant'
 
 
@@ -28,4 +33,8 @@ Vue.use(Tag);
 Vue.use(Tab);
 Vue.use(Tabs);
 Vue.use(Sku);
-
+Vue.use(Cell);
+Vue.use(NavBar);
+Vue.use(Form);
+Vue.use(Uploader);
+Vue.use(Search);

@@ -59,30 +59,33 @@ export default {
       this.isLogin = !this.isLogin
     },
     clickLogin() {
-      if (this.userId.trim() === '' || this.password.trim() === '') {
+      if (this.userId.trim() === "" || this.password.trim() === "") {
         this.$toast.fail('用户名或密码不能为空!')
         return
       }
-      if (this.isLogin) {
-        this.showLoginTip('登陆中')
+      if (this.isLogin) { // login
+        this.showLoginTip('登陆中...')
         this.login()
+      } else {
+        this.$http.register({
+          userId: this.userId,
+          password: this.password
+        })
       }
     },
     login() {
-      // this.$http
-      // .login({
-      //   account: this.account,
-      //   password: this.password
-      // })
-      // .then( res => {
-      //   console.log(res);
-      //   this.$toast.clear()
-      //   // 存数据
-      //   this.setUserInfo(res.data)
-      //   this.$router.push('/home')
-      // })
-      this.$toast.clear()
-      this.$router.push('/home')
+      this.$http
+      .login({
+        userId: this.userId,
+        password: this.password
+      })
+      .then( res => {
+        console.log(res);
+        this.$toast.clear()
+        // 存数据
+        // this.setUserInfo(res.data)
+        this.$router.push('/home')
+      }) 
     },
     showLoginTip(status) {
       this.$toast.loading({
