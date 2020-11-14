@@ -1,0 +1,23 @@
+<script>
+// 手写一个函数的柯里化，实现下面功能：
+// add(2,3,4).sumOf()
+// add(2)(3,4).sumOf()
+// add(2)(3)(4).sumOf()
+// add(2,3)(4).sumOf()
+function curry(fn) {
+    let arr = []
+    function t(...args) {
+      arr.push(...args)
+      return t
+    }
+    t.sumOf = sumOf
+    function sumOf() {
+      fn.apply(this, arr)
+    }
+    return t
+  }
+  let sum = (a, b, c) => a + b + c
+  let add = curry(sum)
+  let res = add(1)(2)(3).sumOf()
+  console.log(res);
+</script>

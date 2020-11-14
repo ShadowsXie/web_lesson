@@ -1,0 +1,17 @@
+<script>
+  function curry(fn) {
+    let arr = []
+    function t(...args) {
+      arr.push(...args)
+      if (arr.length < fn.length) {
+        return t
+      } else {
+        return fn.apply(null, arr)
+      }
+    }
+    return t
+  }
+  let sum = (a, b, c) => a + b + c
+  let fun = curry(sum)
+  console.log(fun(1)(2)(3));
+</script>
