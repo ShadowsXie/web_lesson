@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let obj = {
+      name: 'wn',
+      age: 18,
+      fn: function fn() {
+        console.log(this.name);
+      }
+    }
+
+    let name = '蜗牛'
+
+    function fn() {
+      console.log(this.name);
+    }
+
+    fn.call(obj)
+  </script>
+</body>
+
+</html>
