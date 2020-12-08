@@ -1,36 +1,18 @@
 class Event {
   constructor() {
-    this.listener = []
-  }
-
-  on(name, cb) {
-    if (this.listener[name] === undefined) {
-      this.listener[name] = []
-    }
-    else {
-      this.listener[name].push({
-        cb: cb,
-        once: false
-      })
-    }
+    this.listener = {}
   }
 
   emit(name) {
-    for (let task of this.listener[name]) {
-      task.cb()
-      this.listener[name] = this.listener.name.filter(t => !t.once)
+    for (let event of this.listener[name]) {
+      event()
     }
   }
 
-  once(name, cb) {
-    if (this.listener[name] === undefined) {
+  on(name, fn) {
+    if(!this.listener[name]) {
       this.listener[name] = []
     }
-    else {
-      this.listener[name].push({
-        cb: cb,
-        once: true
-      })
-    }
+    this.listener[name].push(fn)
   }
 }
