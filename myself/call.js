@@ -4,8 +4,8 @@ Function.prototype.mycall = function(context) {
   }
 
   const fn = Symbol('fn')
-  const args = [...arguments].slice(1)
   context = context || window
+  let args = [...arguments].slice(1)
   context.fn = this
   let result = context.fn(...args)
   delete context.fn
