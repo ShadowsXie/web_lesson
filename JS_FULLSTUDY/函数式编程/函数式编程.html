@@ -1,0 +1,63 @@
+<script>
+  // 1、请在不影响原调用的情况下简化下列方法
+  // 封装、抽象
+  // 共同的 逻辑 传进来
+  // 不同地方：传参 传进来
+  // 面向对象： 对数据封装
+  function Person() {
+    this.name = ''
+    this.age = ''
+    this.height = ''
+  }
+  // 函数式编程： 对过程封装
+  function func1(c) {
+  const a = 1
+  const b = 2
+
+  const d = a * b * c
+
+  return a + b + c + d
+  }
+
+  function func2(c) {
+  const a = 1
+  const b = 2
+
+  const d = a + b + c
+
+  return a + b + c + d
+  }
+
+  function func3(c) {
+  const a = 1
+  const b = 2
+
+  const d = a - b + c
+
+  return a + b + c + d
+  }
+
+  function func4(c) {
+  const a = 1
+  const b = 2
+
+  const d = a + b - c
+
+  return a + b + c + d
+  }
+
+  function fun(maked) {
+    const a = 1
+    const b = 2
+    const d = maked(a, b, c)
+    return function(c) {
+      return a + b + c +d
+    }
+  }
+  // 不同地方 传进来：是一个函数
+  const f1 = fun((a, b, c) => a * b * c)
+  const f2 = fun((a, b, c) => a + b + c)
+  const f3 = fun((a, b, c) => a - b + c)
+  const f4 = fun((a, b, c) => a + b - c)
+
+</script>
