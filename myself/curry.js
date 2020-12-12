@@ -1,11 +1,19 @@
 function curry(fn) {
-  let arr = []
-  return function(...args) {
-    arr.push(...args)
-    if (arr.length < fn.length) {
-      return
+  let res = []
+  function a(...arg) {
+    res.push(...arg)
+    if (res.length < fn.length) {
+      return a
     } else {
-      fn.apply(null, arr)
+      return fn.call(this, ...res)
     }
   }
+  return a
 }
+
+function sum1(a, b) {
+  return a + b
+}
+
+let sum = curry(sum1)
+console.log(sum(1)(2), sum(1, 2));

@@ -1,13 +1,13 @@
 function deepClone(obj) {
-  let a = {}
+  let res = {}
   Object.keys(obj).forEach( key => {
     if (obj[key] instanceof Object) {
-      a[key] = deepClone(obj[key])
+      res[key] = deepClone(obj[key])
     } else {
-      a[key] = obj[key]
+      res[key] = obj[key]
     }
-  });
-  return a
+  })
+  return res
 }
 
 let a = {
@@ -21,5 +21,6 @@ let a = {
 }
 
 let b = deepClone(a)
-b.c.e.f = 100
-console.log(a, b);
+let c = Object.assign({}, a)
+a.c.e.f = 100
+console.log(a, b, c);

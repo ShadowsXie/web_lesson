@@ -1,0 +1,27 @@
+<script>
+  function superType() {
+    this.colors = ['blue', 'green', 'red']
+    this.age = 18
+  }
+  
+  superType.prototype = {
+    sex: 'man'
+  }
+
+  function subType(name) {
+    this.name = name
+  }
+
+  subType.prototype = new superType()
+
+  let instance = new subType('玉昆')
+  let instance2 = new subType('于坤')
+
+  console.log(instance);
+  console.log(instance2);
+
+  instance.colors.push('yellow')          // 一个子类实例原型上的属性改变会导致全部实例改变
+  instance2.age = 20
+  instance2.name = '废物'
+  console.log(instance, instance2);
+</script>
