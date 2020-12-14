@@ -1,10 +1,10 @@
 function deepClone(obj) {
   let res = {}
-  Object.keys(obj).forEach( key => {
-    if (obj[key] instanceof Object) {
-      res[key] = deepClone(obj[key])
+  Object.keys(obj).forEach( k => {
+    if (obj[k] instanceof Object) {
+      res[k] = deepClone(obj[k])
     } else {
-      res[key] = obj[key]
+      res[k] = obj[k]
     }
   })
   return res

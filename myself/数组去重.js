@@ -13,3 +13,13 @@ console.log(defArr(a))
 
 let b = [...new Set(a)]
 // console.log(b);
+
+function unique(arr) {
+  let obj = {}
+  arr.forEach(element => {
+    obj[element] = 0
+  });
+  return Object.keys(obj)
+}
+
+console.log(unique(a));
