@@ -7,7 +7,7 @@ const UserSchema = new Schema({
     unique: true,
     require: true
   },
-  account: {
+  accountNum: {
     type: String
   },
   userName: {
@@ -34,13 +34,7 @@ const UserSchema = new Schema({
   provinceId: {
     type: Number
   },
-  major: {
-    type: String
-  },
   college: {
-    type: String
-  },
-  wechat: {
     type: String
   },
   qq: {

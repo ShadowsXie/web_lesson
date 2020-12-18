@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { debounce } from '@/utils/debounce.js'
 export default {
   props: {
     title: {
@@ -41,6 +42,11 @@ export default {
     goBack() {
       this.$router.go(-1)
     }
+  },
+  created() {
+    this.$watch('value', debounce((newValue) => {
+      this.$emit('value', newValue)
+    }, 300))
   }
 }
 </script>

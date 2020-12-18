@@ -7,10 +7,10 @@ const config = require('../../config.js')
 // 登录
 const login = async (ctx, next) => {
   const req = ctx.request.body
-
+  console.log(req);
   // 获取用户userID
   const user = await User_col.findOne({
-    account: req.userId
+    accountNum: req.accountNum
   }, {
     __v: 0,
     _id: 0
@@ -52,7 +52,7 @@ const register = async (ctx, next) => {
   const req = ctx.request.body
 
   const user = await User_col.findOne({
-    account: req.userId
+    accountNum: req.accountNum
   }, {
     __v: 0,
     _id: 0
@@ -69,7 +69,8 @@ const register = async (ctx, next) => {
   const userId = uuidv1()
   const newUser = await User_col.create({
     userId,
-    account: req.userId
+    accountNum: req.accountNum, 
+    school: req.school
   })
   if (newUser) {
     // 加密
@@ -84,7 +85,8 @@ const register = async (ctx, next) => {
         msg: '注册成功',
         data: {
           userId: newUser.userId,
-          account: newUser.account
+          accountNum: newUser.accountNum,
+          school: newUser.school
         }
       }
     }

@@ -18,6 +18,7 @@ import {
   Form,
   Uploader,
   Search,
+  Dialog
 } from 'vant'
 
 
@@ -38,3 +39,4 @@ Vue.use(NavBar);
 Vue.use(Form);
 Vue.use(Uploader);
 Vue.use(Search);
+Vue.use(Dialog);

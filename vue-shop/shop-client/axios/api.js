@@ -1,6 +1,6 @@
 import axios from 'axios'
 import config from './config.js'
-import qs from 'qs' // 序列化请求数据, 服务端要求
+// import qs from 'qs' // 序列化请求数据, 服务端要求
 import router from 'vue-router'
 
 import { Toast } from 'vant'
@@ -15,9 +15,9 @@ export default function $axios(options) {
 
     instance.interceptors.request.use(
       config => {
-        if (config.method.toLocaleLowerCase() === 'post' || config.method.toLocaleLowerCase() === 'put' || config.method.toLocaleLowerCase() === 'delete') {
-          config.data = qs.stringify(config.data)
-        }
+        // if (config.method.toLocaleLowerCase() === 'post' || config.method.toLocaleLowerCase() === 'put' || config.method.toLocaleLowerCase() === 'delete') {
+        //   config.data = qs.stringify(config.data)
+        // }
         return config
       },
       error => {

@@ -4,7 +4,7 @@
 
     <van-cell-group class="box">
       <van-field 
-        v-model="userId" 
+        v-model="accountNum" 
         label="用户名" 
         placeholder="请输入用户名" 
         left-icon="user-o"/>
@@ -22,6 +22,13 @@
         label="确认密码"
         type="password" 
         placeholder="请输入密码" 
+        left-icon="setting-o"/>
+
+      <van-field
+        v-if="hasUserId" 
+        v-model="school" 
+        label="学校"
+        placeholder="请输入学校" 
         left-icon="setting-o"/>
     </van-cell-group>
 
@@ -43,23 +50,26 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   data() {
     return {
       isLogin: true,
       hasUserId: false,
-      userId: '',
+      accountNum: '',
       password: '',
-      rePassword: ''
+      rePassword: '',
+      school: ''
     }
   },
   methods: {
+    ...mapActions(['setUserInfo']),
     clickRegister() {
       this.hasUserId = !this.hasUserId
       this.isLogin = !this.isLogin
     },
     clickLogin() {
-      if (this.userId.trim() === "" || this.password.trim() === "") {
+      if (this.accountNum.trim() === "" || this.password.trim() === "") {
         this.$toast.fail('用户名或密码不能为空!')
         return
       }
@@ -67,24 +77,34 @@ export default {
         this.showLoginTip('登陆中...')
         this.login()
       } else {
-        this.$http.register({
-          userId: this.userId,
-          password: this.password
-        })
+        if (this.password !== this.rePassword) {
+          this.$toast.fail('两次密码输入不一致')
+        }
+        else {
+          this.showLoginTip('注册中...')
+          this.$http.register({
+            accountNum: this.accountNum,
+            password: this.password,
+            school: this.school
+          }).then(() => {
+            this.showLoginTip('登陆中...')
+            this.login()
+          })
+        }
       }
     },
     login() {
       this.$http
       .login({
-        userId: this.userId,
+        accountNum: this.accountNum,
         password: this.password
       })
       .then( res => {
-        console.log(res);
+        // console.log(res);
         this.$toast.clear()
-        // 存数据
-        // this.setUserInfo(res.data)
         this.$router.push('/home')
+        // 存数据
+        this.setUserInfo(res.data)
       }) 
     },
     showLoginTip(status) {
