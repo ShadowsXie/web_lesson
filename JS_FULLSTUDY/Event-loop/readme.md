@@ -12,7 +12,7 @@
 同步代码
 异步代码  - 微任务（microtask）  - 宏任务(macrotask)
 
-微任务：process.nextTick, promise, MutationObserver
+微任务：process.nextTick, promise.then, MutationObserver, aysnc/await后面的代码
 
 宏任务：script, setTimeout, setInterval, setImmediate, I/O, UI rendering
 
@@ -20,6 +20,6 @@
 # Event Loop执行顺序：
 1. 首先执行同步代码，这属于宏任务
 2. 当执行完同步代码后，执行栈为空，查询是否有异步代码需要执行
-3. 执行微任务
+3. 执行微任务(清空微任务队列)
 4. 当执行完所有的微任务后，如果有必要会渲染页面
-5. 然后开始下一轮 Event Loop, 执行宏任务中的异步代码
+5. 然后开始下一轮 Event Loop, 执行宏任务中的异步代码（取一个宏任务执行）

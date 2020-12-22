@@ -1,0 +1,34 @@
+<script>
+  async function foo() {
+    console.log('foo')
+  }
+  async function bar() {
+    console.log('bar start')
+    await foo()
+    console.log('bar end')
+  }
+  console.log('script start')
+  setTimeout(function () {
+    console.log('setTimeout')
+  }, 0)
+  new Promise(function (resolve) {
+    console.log('promise executor')
+    resolve();
+  }).then(function () {
+    console.log('promise then1')
+  }).then(() => {
+    console.log('promise then2')
+  })
+  bar();
+  console.log('script end');
+
+// script start
+// promise executor
+// bar start
+// foo
+// script end
+// promise then1
+// bar end
+// promise then2
+// setTimeout
+</script>
