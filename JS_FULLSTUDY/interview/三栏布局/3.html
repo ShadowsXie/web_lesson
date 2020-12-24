@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .left {
+    width: 40px;
+    background-color: blue;
+    display: inline-block;
+    /* float: left; */
+  }
+  .right {
+    /* calc css里面为数不多的一个函数 计算*/
+    width: calc(100% - 40px);
+    background-color: green;
+    display: inline-block;
+    /* float: left; */
+  }
+</style>
+<body>
+  <!-- 
+    flex
+    设置在父元素上的属性有：
+      flex-direction、flex-wrap、flex-flow、justify-content、align-item、align-content
+    子元素的属性有：
+      order、flex-grow、flex-shrink、flex-basis、flex、align-self
+   -->
+
+  <div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+</body>
+</html>

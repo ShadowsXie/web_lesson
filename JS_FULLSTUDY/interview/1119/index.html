@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .second {
+      width: 1px;
+      height: 100px;
+      background-color: red;
+      transform-origin: bottom;
+      animation: second 60s linear infinite;
+    }
+
+    @keyframes second {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* .step {
+      width: 88.83333333333333px;
+      height: 54px;
+      margin: 10px auto;
+      background: url(./test.png) no-repeat;
+      background-position: 0 0;
+      animation: step 1s steps(6) both infinite;
+    }
+
+    @keyframes step {
+      100% {
+        background-position: -533px 0;
+      }
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- <div class="step"></div> -->
+  <div class="second"></div>
+  <!-- <script>
+    let worker = new Worker('./worker.js');
+    worker.onmessage = function (sum) {
+      console.log(sum);
+    }
+    setTimeout(() => {
+      worker.postMessage('start')
+    }, 3000)
+  </script> -->
+</body>
+
+</html>
