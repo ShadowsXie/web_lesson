@@ -2,18 +2,26 @@
   function MyPromise(fn) {
     let self = this;
     this.value = undefined;
+    this.status = 'PENDING';
     function onResolve(value) {
-      console.log(value);
+      // console.log(value);
+      self.status = 'FULFILLED';
       self.value = value;
+      self.onFulFilled && self.onFulFilled(value);
     }  // 定义 什么时候执行
     function onReject(reason) {}
     fn(onResolve, onReject);
   }
   MyPromise.prototype.then = function(fn) {
-    fn(this.value);
+    if (this.status === 'FULFILLED') fn(this.value);
+    // 
+    else if (this.status === 'PENDING') this.onFulFilled = fn;
+    
   }
   new MyPromise((resolve, reject) => {
-    resolve(1000);  // 改变状态的时候 
+    setTimeout(() => {
+      resolve(1000);
+    }, 1000)  // 改变状态的时候 
   })
   .then(r => {
     console.log(r)
@@ -27,4 +35,12 @@
   readFile((r) => {
     console.log(r); // hello world
   })
+  // 移动端
+  // pc
+  // 数据可视化
+  // app (RN ...)
+  // node
+  // 工程化(webpack)
+  // 组件化（组件库）
+  // 一精多通
 </script>
