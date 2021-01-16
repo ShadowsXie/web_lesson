@@ -1,0 +1,53 @@
+<script>
+  // 深度优先
+  function deepclone(obj) {
+    let res = {}
+    Object.keys(obj).forEach(k => {
+      if(typeof obj[k] === 'object' && obj[k] !== null) {
+        res[k] = deepclone(obj[k])
+      } else {
+        res[k] = obj[k]
+      }
+    })
+    return res
+  }
+
+  let obj = {
+    a: 1,
+    b: {
+      c: 2,
+      d: {
+        e: 3
+      }
+    }
+  }
+  // 广度优先
+  function deepclone1(obj) {
+    let queue = [], res = {}
+    Object.keys(obj).forEach(k => {
+      queue.push({
+        key: k,
+        value: obj[k],
+        parent: res
+      })
+    })
+    while(queue.length) {
+      let node = queue.shift()
+      let {key, value, parent} = node
+      if (typeof value === 'object') {
+        if(!parent[key]) parent[key] = {}
+        Object.keys(value).forEach(k => {
+          queue.push({
+            key: k,
+            value: value[k],
+            parent: parent[key]
+          })
+        })
+      } else {
+        parent[key] = value
+      }
+    }
+    return res
+  }
+  console.log(deepclone1(obj));
+</script>
