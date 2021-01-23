@@ -14,7 +14,7 @@
       <p class="forgot-pwd">忘记密码</p>
       <div class="sign">登录</div>
     </div>
-    <p class="register">新用户？点击这里注册</p>
+    <p class="register" @click="register">新用户？点击这里注册</p>
   </div>
 </template>
 
@@ -25,6 +25,11 @@ export default {
       avatar: require('../assets/img/raw_1512446140.jpeg'),
       username: '',
       userpwd: ''
+    }
+  },
+  methods: {
+    register() {
+      this.$router.push({ path: '/StarRegist'})
     }
   }
 }

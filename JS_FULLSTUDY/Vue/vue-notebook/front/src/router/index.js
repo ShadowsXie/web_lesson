@@ -27,6 +27,14 @@ const routes = [
     meta: {
       title: '登录'
     }
+  },
+  {
+    path: '/StarRegist',
+    name: 'StarRegist',
+    component: () => import('@/views/StarRegist.vue'),
+    meta: {
+      title: '登录'
+    }
   }
 ]
 
