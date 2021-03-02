@@ -1,8 +1,8 @@
-function mynew(fn) {
+let myNew = function(fn) {
   let obj = {}
   obj.__proto__ = fn.prototype
   let args = [...arguments].splice(1)
-  let result = fn.call(obj, ...args)
+  let result = fn.apply(obj, args)
   return typeof result === 'object' ? result : obj
 }
 
@@ -11,7 +11,6 @@ function Person(name, age) {
   this.age = age
 }
 
-let a = new Person(1, 2)
-let b = mynew(Person, 3, 4)
-console.log(a);
-console.log(b);
+let p1 = new Person('xiaomin', 15)
+let p2 = myNew(Person, 'xiaozhang', 20)
+console.log(p1, p2);

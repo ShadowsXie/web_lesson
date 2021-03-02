@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <ul id="title">
+      <li class="red">
+        <div class="red">
+          <p>红</p>
+        </div>
+      </li>
+      <li class="black">黑</li>
+      <li class="white">白</li>
+      <li class="green">绿</li>
+      <li class="blue">蓝</li>
+    </ul>
+  </div>
+
+  <script>
+    let ul = document.getElementById('title')
+    // console.log(ul);
+    // let oli = ul.getElementsByTagName('li')
+    // console.log(oli[0]);
+    // for (let i = 0; i < oli.length; i ++) {
+    //   oli[i].onclick = function(e) {
+    //     console.log(e.target.innerHTML);
+    //   }
+    // }
+    ul.onclick = function(e) {
+      console.log(e.target.parentNode.parentNode);
+      console.log(e.target.innerHTML);
+      e.stopPropagation()
+    }
+  </script>
+</body>
+</html>
