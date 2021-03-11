@@ -21,10 +21,10 @@
 
 function format(n) {
   let num = n + ''
-  return num.split('').reverse().reduce((current, arr, index) => {
-    console.log(current);
-    return ((index % 3) ? arr : (arr + ',')) + current
+  return num.split('').reverse().reduce((res, current, index) => {
+    console.log(res, current, index);
+    return ((index % 3) ? current : (current + ',')) + res
   })
 }
 
-console.log(format(1234679414646));
+console.log(format(123456789));

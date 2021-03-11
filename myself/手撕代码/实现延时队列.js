@@ -6,21 +6,21 @@ function sleep(time) {
   })
 }
 
-async function queue(obj, func) {
-  for(let i of obj) {
+
+async function queue(obj) {
+  for (let i of obj) {
     await sleep(i.time)
-    func(i.value)
+    console.log(i.value);
   }
 }
 
-let obj = [
-  { value: 1, time: 1000 },
-  { value: 2, time: 1000 },
-  { value: 3, time: 1000 },
-  { value: 4, time: 1000 },
-  { value: 5, time: 1000 }
-];
 
-queue(obj, (value) => {
-  console.log(value);
-})
+let obj = [
+  {value: 1000, time: 1000},
+  {value: 2000, time: 1000},
+  {value: 3000, time: 1000},
+  {value: 4000, time: 1000},
+  {value: 5000, time: 1000},
+]
+
+queue(obj)
