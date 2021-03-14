@@ -1,11 +1,15 @@
-let a = {
-  b: 1
-}
+const http = require('http');
 
-let c = new Proxy(a, {
-  get: () => {
-    return
+const server = http.createServer();
+
+server.on('request', (req, res) => {
+  if(req.url === '/') {
+    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Length', 5);
+    res.write("helloworld");
   }
 })
 
-console.log(a.b);
+server.listen(8081, () => {
+  console.log("成功启动");
+})
