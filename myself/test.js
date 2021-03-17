@@ -1,15 +1,12 @@
-const http = require('http');
-
-const server = http.createServer();
-
-server.on('request', (req, res) => {
-  if(req.url === '/') {
-    res.setHeader('Content-Type', 'text/plain');
-    res.setHeader('Content-Length', 5);
-    res.write("helloworld");
-  }
-})
-
-server.listen(8081, () => {
-  console.log("成功启动");
-})
+setTimeout(() => console.log('a'));
+Promise.resolve().then(
+   () => console.log('b’);
+ ).then(
+   () => Promise.resolve('c').then(
+     (data) => {
+       setTimeout(() => console.log('d'));
+       console.log('f');
+       return data;
+     }
+   )
+ ).then(data => console.log(data));

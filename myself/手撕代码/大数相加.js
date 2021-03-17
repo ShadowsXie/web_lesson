@@ -18,9 +18,9 @@ function bigNumberSum(num1, num2) {
   }
   for (let i = length - 1; i >= 0; i -- ) {
     let sum = Number(n1[i]) + Number(n2[i]) + arr
-    if (sum > 10) {
+    if (sum >= 10) {
       arr = 1
-      res.unshift(sum / 10)
+      res.unshift(sum % 10)
     } else {
       arr = 0
       res.unshift(sum)
@@ -30,4 +30,4 @@ function bigNumberSum(num1, num2) {
   return res.join('')
 } 
 
-console.log(bigNumberSum('11111111111111111','11111111111111111'));
+console.log(bigNumberSum('1','9'));
