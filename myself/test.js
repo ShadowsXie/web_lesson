@@ -1,12 +1,22 @@
-setTimeout(() => console.log('a'));
-Promise.resolve().then(
-   () => console.log('b’);
- ).then(
-   () => Promise.resolve('c').then(
-     (data) => {
-       setTimeout(() => console.log('d'));
-       console.log('f');
-       return data;
-     }
-   )
- ).then(data => console.log(data));
+var a = {
+    b:'b',
+    c:function(){
+        console.log(this.b)
+    }
+}
+a.c()
+var a = {
+    b:'b',
+    c:()=>{
+        console.log(this)
+    }
+}
+a.c()
+var a = {
+    b:'b',
+    c:function(){
+        console.log(this.b)
+    }
+}
+let d = a.c
+d()
