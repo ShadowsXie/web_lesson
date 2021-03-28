@@ -20,11 +20,11 @@
 
 
 function format(n) {
-  let num = n + ''
-  return num.split('').reverse().reduce((res, current, index) => {
-    console.log(res, current, index);
-    return ((index % 3) ? current : (current + ',')) + res
+  let nums = n + ''
+  let res = nums.split('').reverse().reduce((toa, current, index) => {
+    return ((index % 3) ? current : (current + ',')) + toa 
   })
+  return res
 }
 
 console.log(format(123456789));
