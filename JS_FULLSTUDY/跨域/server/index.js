@@ -4,7 +4,8 @@ const qs = require('querystring')
 http.createServer((req, res) => {
   if (req.url.includes('/api')) {
     let json = {
-      code: 0
+      name: 'wn',
+      age: 18
     }
     // ?callback=xx&a=1&b=2
     qs.parse(req.url.split('?')[1]);

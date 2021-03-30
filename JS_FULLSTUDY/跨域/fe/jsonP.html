@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="jsonp">点我</button>
+  <script>
+    let btn = document.getElementById('jsonp')
+    btn.onclick = () => {
+      let scriptEle = document.createElement('script')
+      scriptEle.src = 'http://localhost:8088/' 
+      document.body.appendChild(scriptEle)
+    }
+
+    function fn(res) {
+      console.log(res);
+    }
+  </script>
+</body>
+</html>
